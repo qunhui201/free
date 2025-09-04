@@ -6,38 +6,16 @@ import json
 from urllib.parse import urlparse
 from typing import List, Dict, Set
 
-# List of unique URLs provided by the user
+# List of URLs that successfully returned nodes
 URLS = [
     "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/v2",
     "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml",
     "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
     "https://raw.githubusercontent.com/WLget/V2Ray_configs_64/refs/heads/master/ConfigSub_list.txt",
     "https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray",
-    "https://raw.githubusercontent.com/StormragerCN/v2ray/raw/refs/heads/main/v2ray",
-    "https://raw.githubusercontent.com/aiboboxx/clash/main/free",
-    "https://raw.githubusercontent.com/MZF0121/fanqiang/master/v2ray",
-    "https://raw.githubusercontent.com/leetomlee123/freenode/main/v2ray",
-    "https://www.xrayvip.com/free.txt",
-    "https://raw.githubusercontent.com/nodesfree/v2raynode/main/sub",
-    "https://raw.githubusercontent.com/shaoyouvip/free/main/v2ray",
-    "https://raw.githubusercontent.com/jiawe1258/V2Ray_-/main/v2ray",
     "https://raw.githubusercontent.com/freefq/free/master/v2",
     "https://raw.githubusercontent.com/liuxu0511/free18-v2ray/main/c.yaml",
-    "https://raw.githubusercontent.com/sun9426/sun9426.github.io/main/v2ray",
-    "https://raw.githubusercontent.com/hwanz/SSR-V2ray-Trojan-vpn/main/sub",
-    "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/sub.txt",
-    "https://raw.githubusercontent.com/v2raynode/v2raynode/main/free.txt",
-    "https://raw.githubusercontent.com/freeclashnode/free/main/clash.yaml",
-    "https://raw.githubusercontent.com/v2rayse/free/main/v2ray.txt",
-    "https://raw.githubusercontent.com/wanzhuanmi/free/main/clash.yaml",
-    "https://raw.githubusercontent.com/cfmem/free/main/v2ray",
-    "https://raw.githubusercontent.com/mibei77/free/main/v2ray.txt",
-    "https://raw.githubusercontent.com/clashgithub/free/main/clash.yaml",
-    "https://raw.githubusercontent.com/v2raynode/free/main/v2ray",
-    "https://raw.githubusercontent.com/free18/free/main/v2ray.txt",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/v2ray",
-    "https://raw.githubusercontent.com/nodesfree/free/main/clash.yaml",
-    "https://raw.githubusercontent.com/sharmajv/vpn/main/free.txt"
+    "https://www.xrayvip.com/free.txt"
 ]
 
 # Function to download content from a URL
@@ -206,7 +184,7 @@ def main():
     
     print(f"Total working nodes: {len(working_nodes)}")
     
-    # Output working nodes to a file (e.g., for GitHub Actions artifact)
+    # Output working nodes to a file
     with open('working_nodes.json', 'w') as f:
         json.dump(working_nodes, f, indent=4)
 
