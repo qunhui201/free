@@ -3,11 +3,11 @@ import base64
 import yaml
 import socket
 import json
-from urllib.parse import urlparse
-from typing import List, Dict, Set
 import subprocess
 import tempfile
 import os
+from urllib.parse import urlparse
+from typing import List, Dict, Set
 
 # List of URLs that successfully returned nodes
 URLS = [
@@ -100,11 +100,11 @@ def extract_nodes(url: str, content: str) -> List[Dict]:
                     'type': proxy.get('type', 'unknown'),
                     'server': proxy.get('server'),
                     'port': proxy.get('port'),
-                    'full_config': link  # Store V2Ray-style link
+                    'full_config': link
                 }
                 nodes.append(node)
     
-    elif 'base64' in content.lower() or len(content) % 4 == 0:  # Heuristic for base64
+    elif 'base64' in content.lower() or len(content) % 4 == 0:
         format_type = "base64"
         lines = parse_base64_content(content)
         for line in lines:
@@ -185,26 +185,25 @@ def deduplicate_nodes(all_nodes: List[Dict]) -> List[Dict]:
     print(f"Deduplicated to {len(unique_nodes)} unique nodes")
     return unique_nodes
 
-# Function to test connectivity (port check + HTTP request test)
+# Function to test connectivity (port check or HTTP request test based on env variable)
 def test_connectivity(node: Dict) -> bool:
     if not node.get('server') or not node.get('port'):
         return False
     
-    # Step 1: Basic port check
-    try:
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(5)
-        result = sock.connect_ex((node['server'], int(node['port'])))
-        sock.close()
-        if result != 0:
+    # Check if USE_PORT_TEST is set to true
+    if os.getenv('USE_PORT_TEST', 'false').lower() == 'true':
+        try:
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            sock.settimeout(5)
+            result = sock.connect_ex((node['server'], int(node['port'])))
+            sock.close()
+            return result == 0
+        except:
             return False
-    except:
-        return False
-
-    # Step 2: HTTP request test using v2ray
+    
+    # Default: HTTP request test using V2Ray
     try:
         with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json') as temp_config:
-            # Create a minimal V2Ray config
             config = {
                 "inbounds": [{
                     "port": 10808,
@@ -240,14 +239,14 @@ def test_connectivity(node: Dict) -> bool:
                 }
             elif node['type'] == 'trojan':
                 parts = node['full_config'].split('://')[1].split('@')
-                    server_port = parts[1].split(':')
-                    config['outbounds'][0]['settings'] = {
-                        "servers": [{
-                            "address": node['server'],
-                            "port": int(node['port']),
-                            "password": parts[0]
-                        }]
-                    }
+                server_port = parts[1].split(':')
+                config['outbounds'][0]['settings'] = {
+                    "servers": [{
+                        "address": node['server'],
+                        "port": int(server_port[1].split('?')[0].split('#')[0]),
+                        "password": parts[0]
+                    }]
+                }
             json.dump(config, temp_config)
             temp_config_path = temp_config.name
 
