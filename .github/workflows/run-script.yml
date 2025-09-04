@@ -28,7 +28,7 @@ jobs:
     - name: 安装依赖
       run: |
         python -m pip install --upgrade pip
-        pip install requests pyyaml
+        pip install requests pyyaml pysocks
       env:
         PYTHONUNBUFFERED: 1  # 确保实时日志输出
 
@@ -44,7 +44,7 @@ jobs:
       run: python test/script.py
       env:
         PYTHONUNBUFFERED: 1  # 确保实时日志输出
-        USE_PORT_TEST: false  # 设置为 true 以使用端口测试
+        USE_HTTP_TEST: false  # 默认使用端口测试，设为 true 启用 HTTP 测试
 
     - name: 验证输出文件
       if: success()  # 仅在脚本成功运行时验证
