@@ -63,7 +63,8 @@ def extract_nodes(url: str, content: str) -> List[Dict]:
                 'type': proxy.get('type', 'unknown'),
                 'server': proxy.get('server'),
                 'port': proxy.get('port'),
-                'full_config': json.dumps(proxy, sort_keys=True)  # For dedup
+                'full_config': json.dumps(proxy, sort_keys=True),  # For dedup
+                'raw_config': proxy  # Store original config for YAML output
             }
             nodes.append(node)
     
@@ -101,18 +102,28 @@ def parse_proxy_link(link: str) -> Dict:
                 'type': 'vmess',
                 'server': config.get('add'),
                 'port': config.get('port'),
-                'full_config': link
+                'full_config': link,
+                'raw_config': config  # Store original config for YAML output
             }
         elif scheme == 'ss':
             # ss://base64(method:password)@server:port
             parts = link.split('://')[1].split('@')
             auth = base64.b64decode(parts[0] + '==').decode('utf-8')
             server_port = parts[1].split(':')
+            method, password = auth.split(':')
             return {
                 'type': 'ss',
                 'server': server_port[0],
                 'port': int(server_port[1].split('#')[0]),
-                'full_config': link
+                'full_config': link,
+                'raw_config': {
+                    'name': server_port[0],
+                    'type': 'ss',
+                    'server': server_port[0],
+                    'port': int(server_port[1].split('#')[0]),
+                    'cipher': method,
+                    'password': password
+                }
             }
         elif scheme == 'trojan':
             # trojan://password@server:port
@@ -123,7 +134,14 @@ def parse_proxy_link(link: str) -> Dict:
                 'type': 'trojan',
                 'server': server_port[0],
                 'port': int(server_port[1].split('?')[0].split('#')[0]),
-                'full_config': link
+                'full_config': link,
+                'raw_config': {
+                    'name': server_port[0],
+                    'type': 'trojan',
+                    'server': server_port[0],
+                    'port': int(server_port[1].split('?')[0].split('#')[0]),
+                    'password': password
+                }
             }
         elif scheme == 'ssr':
             # ssr://base64(config)
@@ -134,7 +152,16 @@ def parse_proxy_link(link: str) -> Dict:
                 'type': 'ssr',
                 'server': parts[0],
                 'port': int(parts[1]),
-                'full_config': link
+                'full_config': link,
+                'raw_config': {
+                    'name': parts[0],
+                    'type': 'ssr',
+                    'server': parts[0],
+                    'port': int(parts[1]),
+                    'protocol': parts[2],
+                    'cipher': parts[3],
+                    'obfs': parts[4]
+                }
             }
         return None
     except:
@@ -165,6 +192,13 @@ def test_connectivity(node: Dict) -> bool:
     except:
         return False
 
+# Function to generate YAML config for working nodes
+def generate_yaml_config(working_nodes: List[Dict]) -> str:
+    yaml_config = {
+        'proxies': [node['raw_config'] for node in working_nodes if 'raw_config' in node]
+    }
+    return yaml.dump(yaml_config, allow_unicode=True, sort_keys=False)
+
 # Main function
 def main():
     all_nodes = []
@@ -184,9 +218,13 @@ def main():
     
     print(f"Total working nodes: {len(working_nodes)}")
     
-    # Output working nodes to a file
+    # Output working nodes to JSON file
     with open('working_nodes.json', 'w') as f:
         json.dump(working_nodes, f, indent=4)
+    
+    # Output working nodes to YAML file
+    with open('working_nodes.yaml', 'w') as f:
+        f.write(generate_yaml_config(working_nodes))
 
 if __name__ == "__main__":
     main()
