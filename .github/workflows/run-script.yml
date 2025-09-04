@@ -6,6 +6,7 @@ on:
     paths-ignore:
       - 'test/script.py'  # 忽略对 script.py 的更改
       - '.github/workflows/run-script.yml'  # 忽略对工作流文件的更改
+      - 'test/working_nodes.txt'  # 忽略对输出文件的更改
   schedule:
     - cron: '0 0 * * *'  # 每天 UTC 午夜运行（JST 09:00）
   workflow_dispatch:  # 支持手动触发
@@ -33,6 +34,18 @@ jobs:
       run: python test/script.py
       env:
         PYTHONUNBUFFERED: 1  # 确保实时日志输出
+
+    - name: 验证输出文件
+      if: success()  # 仅在脚本成功运行时验证
+      run: |
+        echo "Checking test/working_nodes.txt"
+        if [ -f test/working_nodes.txt ]; then
+          echo "File exists. Number of nodes: $(wc -l < test/working_nodes.txt)"
+          head -n 5 test/working_nodes.txt  # 显示前 5 行以验证格式
+        else
+          echo "Error: test/working_nodes.txt not found"
+          exit 1
+        fi
 
     - name: 上传结果作为 artifact
       if: success()  # 仅在脚本成功运行时上传
