@@ -18,7 +18,8 @@ URLS = [
     "https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray",
     "https://raw.githubusercontent.com/freefq/free/master/v2",
     "https://raw.githubusercontent.com/liuxu0511/free18-v2ray/main/c.yaml",
-    "https://www.xrayvip.com/free.txt"
+    "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+    "https://www.xrayvip.com/free.txt"  
 ]
 
 # Function to download content from a URL
