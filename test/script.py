@@ -31,7 +31,7 @@ def download_content(url: str) -> str:
         print(f"Error downloading {url}: {e}")
         return ""
 
-# Function to parse base64 encoded content (common for V2Ray/SSR subscriptions)
+# Function to parse base64 encoded content
 def parse_base64_content(content: str) -> List[str]:
     try:
         decoded = base64.b64decode(content).decode('utf-8').strip()
@@ -49,7 +49,7 @@ def parse_yaml_content(content: str) -> List[Dict]:
     except:
         return []
 
-# Function to parse plain text lines (e.g., lists of links or configs)
+# Function to parse plain text lines
 def parse_plain_text(content: str) -> List[str]:
     return content.splitlines()
 
@@ -80,7 +80,9 @@ def clash_to_v2ray_link(proxy: Dict) -> str:
             return f"ss://{encoded_auth}@{server_port}#{proxy.get('name', proxy.get('server'))}"
         elif proxy_type == 'trojan':
             server_port = f"{proxy.get('server')}:{proxy.get('port')}"
-            return f"trojan://{proxy.get('password')}@{server_port}#{proxy.get('name', proxy.get('server'))}"
+            sni = proxy.get('sni', '')
+            query = f"?sni={sni}" if sni else ""
+            return f"trojan://{proxy.get('password')}@{server_port}#{proxy.get('name', proxy.get('server'))}{query}"
         return ""
     except:
         return ""
@@ -185,23 +187,25 @@ def deduplicate_nodes(all_nodes: List[Dict]) -> List[Dict]:
     print(f"Deduplicated to {len(unique_nodes)} unique nodes")
     return unique_nodes
 
-# Function to test connectivity (port check or HTTP request test based on env variable)
+# Function to test connectivity (port check or HTTP request test)
 def test_connectivity(node: Dict) -> bool:
     if not node.get('server') or not node.get('port'):
         return False
     
-    # Check if USE_PORT_TEST is set to true
-    if os.getenv('USE_PORT_TEST', 'false').lower() == 'true':
+    # Default to port test unless USE_HTTP_TEST is true
+    if os.getenv('USE_HTTP_TEST', 'false').lower() != 'true':
         try:
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             sock.settimeout(5)
             result = sock.connect_ex((node['server'], int(node['port'])))
             sock.close()
+            print(f"Port test for {node['server']}:{node['port']} - {'Success' if result == 0 else 'Failed'}")
             return result == 0
-        except:
+        except Exception as e:
+            print(f"Port test failed for {node['server']}:{node['port']}: {e}")
             return False
     
-    # Default: HTTP request test using V2Ray
+    # HTTP request test using V2Ray
     try:
         with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json') as temp_config:
             config = {
@@ -265,9 +269,10 @@ def test_connectivity(node: Dict) -> bool:
         v2ray_process.terminate()
         os.unlink(temp_config_path)
         
+        print(f"HTTP test for {node['server']}:{node['port']} - Success")
         return response.status_code == 200
     except Exception as e:
-        print(f"Proxy test failed for {node['server']}:{node['port']}: {e}")
+        print(f"HTTP test failed for {node['server']}:{node['port']}: {e}")
         if 'v2ray_process' in locals():
             v2ray_process.terminate()
         if 'temp_config_path' in locals() and os.path.exists(temp_config_path):
