@@ -15,6 +15,8 @@ jobs:
     steps:
     - name: 检出仓库代码
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}  # 确保有权限推送
 
     - name: 设置 Python 环境
       uses: actions/setup-python@v5
@@ -33,14 +35,32 @@ jobs:
       env:
         PYTHONUNBUFFERED: 1  # 确保实时日志输出
 
-    - name: 上传结果
+    - name: 移动生成的文件到 test/ 目录
+      if: success()  # 仅在脚本成功运行时移动
+      run: |
+        mkdir -p test
+        mv working_nodes.json test/working_nodes.json
+        mv working_nodes.yaml test/working_nodes.yaml
+
+    - name: 提交文件到仓库
+      if: success()  # 仅在脚本成功运行时提交
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add test/working_nodes.json test/working_nodes.yaml
+        git commit -m "Update working nodes files"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: 上传结果作为 artifact
       if: success()  # 仅在脚本成功运行时上传
       uses: actions/upload-artifact@v4
       with:
         name: working-nodes
         path: |
-          working_nodes.json
-          working_nodes.yaml
+          test/working_nodes.json
+          test/working_nodes.yaml
         retention-days: 7  # 保留 7 天
 
     - name: 失败时通知
@@ -68,6 +88,6 @@ jobs:
         name: error-logs
         path: |
           *.log
-          working_nodes.json
-          working_nodes.yaml
+          test/working_nodes.json
+          test/working_nodes.yaml
         retention-days: 3  # 保留 3 天
