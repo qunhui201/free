@@ -5,6 +5,9 @@ import socket
 import json
 from urllib.parse import urlparse
 from typing import List, Dict, Set
+import subprocess
+import tempfile
+import os
 
 # List of URLs that successfully returned nodes
 URLS = [
@@ -127,9 +130,8 @@ def parse_proxy_link(link: str) -> Dict:
     try:
         scheme = urlparse(link).scheme
         if scheme == 'vmess':
-            # vmess://base64(json)
             encoded = link.split('://')[1]
-            decoded = base64.b64decode(encoded + '==').decode('utf-8')  # Padding if needed
+            decoded = base64.b64decode(encoded + '==').decode('utf-8')
             config = json.loads(decoded)
             return {
                 'type': 'vmess',
@@ -138,7 +140,6 @@ def parse_proxy_link(link: str) -> Dict:
                 'full_config': link
             }
         elif scheme == 'ss':
-            # ss://base64(method:password)@server:port
             parts = link.split('://')[1].split('@')
             auth = base64.b64decode(parts[0] + '==').decode('utf-8')
             server_port = parts[1].split(':')
@@ -149,7 +150,6 @@ def parse_proxy_link(link: str) -> Dict:
                 'full_config': link
             }
         elif scheme == 'trojan':
-            # trojan://password@server:port
             parts = link.split('://')[1].split('@')
             password = parts[0]
             server_port = parts[1].split(':')
@@ -160,7 +160,6 @@ def parse_proxy_link(link: str) -> Dict:
                 'full_config': link
             }
         elif scheme == 'ssr':
-            # ssr://base64(config)
             encoded = link.split('://')[1]
             decoded = base64.b64decode(encoded + '==').decode('utf-8')
             parts = decoded.split(':')
@@ -186,21 +185,99 @@ def deduplicate_nodes(all_nodes: List[Dict]) -> List[Dict]:
     print(f"Deduplicated to {len(unique_nodes)} unique nodes")
     return unique_nodes
 
-# Function to test connectivity (simple port check)
+# Function to test connectivity (port check + HTTP request test)
 def test_connectivity(node: Dict) -> bool:
     if not node.get('server') or not node.get('port'):
         return False
+    
+    # Step 1: Basic port check
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(5)
         result = sock.connect_ex((node['server'], int(node['port'])))
         sock.close()
-        return result == 0
+        if result != 0:
+            return False
     except:
+        return False
+
+    # Step 2: HTTP request test using v2ray
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json') as temp_config:
+            # Create a minimal V2Ray config
+            config = {
+                "inbounds": [{
+                    "port": 10808,
+                    "protocol": "socks",
+                    "settings": {"auth": "noauth"}
+                }],
+                "outbounds": [{
+                    "protocol": node['type'],
+                    "settings": {}
+                }]
+            }
+            
+            if node['type'] == 'vmess':
+                decoded = json.loads(base64.b64decode(node['full_config'].split('://')[1] + '==').decode('utf-8'))
+                config['outbounds'][0]['settings'] = {
+                    "vnext": [{
+                        "address": node['server'],
+                        "port": int(node['port']),
+                        "users": [{"id": decoded.get('id'), "alterId": decoded.get('aid', 0)}]
+                    }]
+                }
+            elif node['type'] == 'ss':
+                parts = node['full_config'].split('://')[1].split('@')
+                auth = base64.b64decode(parts[0] + '==').decode('utf-8')
+                method, password = auth.split(':')
+                config['outbounds'][0]['settings'] = {
+                    "servers": [{
+                        "address": node['server'],
+                        "port": int(node['port']),
+                        "method": method,
+                        "password": password
+                    }]
+                }
+            elif node['type'] == 'trojan':
+                parts = node['full_config'].split('://')[1].split('@')
+                    server_port = parts[1].split(':')
+                    config['outbounds'][0]['settings'] = {
+                        "servers": [{
+                            "address": node['server'],
+                            "port": int(node['port']),
+                            "password": parts[0]
+                        }]
+                    }
+            json.dump(config, temp_config)
+            temp_config_path = temp_config.name
+
+        # Start V2Ray with temporary config
+        v2ray_process = subprocess.Popen(['v2ray', '-config', temp_config_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        
+        # Wait briefly for V2Ray to start
+        import time
+        time.sleep(2)
+        
+        # Test HTTP request through proxy
+        proxies = {'http': 'socks5://127.0.0.1:10808', 'https': 'socks5://127.0.0.1:10808'}
+        response = requests.get('http://ip-api.com/json', proxies=proxies, timeout=10)
+        
+        # Clean up
+        v2ray_process.terminate()
+        os.unlink(temp_config_path)
+        
+        return response.status_code == 200
+    except Exception as e:
+        print(f"Proxy test failed for {node['server']}:{node['port']}: {e}")
+        if 'v2ray_process' in locals():
+            v2ray_process.terminate()
+        if 'temp_config_path' in locals() and os.path.exists(temp_config_path):
+            os.unlink(temp_config_path)
         return False
 
 # Function to generate text file with working node links
 def generate_node_file(working_nodes: List[Dict]) -> None:
+    os.makedirs('test', exist_ok=True)
     with open('test/working_nodes.txt', 'w') as f:
         for node in working_nodes:
             f.write(f"{node['full_config']}\n")
