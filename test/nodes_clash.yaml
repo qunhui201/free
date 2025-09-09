@@ -4,7 +4,7 @@ allow-lan: true
 mode: Rule
 log-level: info
 proxies:
-- name: node1_tls
+- name: node1_tls_1
   server: wz.weishao2023.dk.eu.org
   port: 443
   type: vless
@@ -14,9 +14,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node1_notls
+- name: node1_notls_1
   server: wz.weishao2023.dk.eu.org
   port: 8080
   type: vless
@@ -26,9 +26,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node2_tls
+- name: node2_tls_2
   server: wz.weishao2023.uk.eu.org
   port: 443
   type: vless
@@ -38,9 +38,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node2_notls
+- name: node2_notls_2
   server: wz.weishao2023.uk.eu.org
   port: 8080
   type: vless
@@ -50,9 +50,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node3_tls
+- name: node3_tls_3
   server: cloudflare.cfgo.cc
   port: 443
   type: vless
@@ -62,9 +62,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node3_notls
+- name: node3_notls_3
   server: cloudflare.cfgo.cc
   port: 8080
   type: vless
@@ -74,9 +74,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node4_tls
+- name: node4_tls_4
   server: 086181.xyz
   port: 443
   type: vless
@@ -86,9 +86,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node4_notls
+- name: node4_notls_4
   server: 086181.xyz
   port: 8080
   type: vless
@@ -98,9 +98,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node5_tls
+- name: node5_tls_5
   server: stock.hostmonit.com
   port: 443
   type: vless
@@ -110,9 +110,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node5_notls
+- name: node5_notls_5
   server: stock.hostmonit.com
   port: 8080
   type: vless
@@ -122,9 +122,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node6_tls
+- name: node6_tls_6
   server: www.lyzdzy.com
   port: 443
   type: vless
@@ -134,9 +134,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node6_notls
+- name: node6_notls_6
   server: www.lyzdzy.com
   port: 8080
   type: vless
@@ -146,9 +146,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node7_tls
+- name: node7_tls_7
   server: xs.wxtv.cc
   port: 443
   type: vless
@@ -158,9 +158,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node7_notls
+- name: node7_notls_7
   server: xs.wxtv.cc
   port: 8080
   type: vless
@@ -170,9 +170,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node8_tls
+- name: node8_tls_8
   server: cf.zmdhc.com
   port: 443
   type: vless
@@ -182,9 +182,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node8_notls
+- name: node8_notls_8
   server: cf.zmdhc.com
   port: 8080
   type: vless
@@ -194,9 +194,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node9_tls
+- name: node9_tls_9
   server: www.90dushu.com
   port: 443
   type: vless
@@ -206,9 +206,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node9_notls
+- name: node9_notls_9
   server: www.90dushu.com
   port: 8080
   type: vless
@@ -218,9 +218,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node10_tls
+- name: node10_tls_10
   server: www.tushencn.com
   port: 443
   type: vless
@@ -230,9 +230,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node10_notls
+- name: node10_notls_10
   server: www.tushencn.com
   port: 8080
   type: vless
@@ -242,9 +242,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node11_tls
+- name: node11_tls_11
   server: 7sc.cc
   port: 443
   type: vless
@@ -254,9 +254,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node11_notls
+- name: node11_notls_11
   server: 7sc.cc
   port: 8080
   type: vless
@@ -266,9 +266,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node12_tls
+- name: node12_tls_12
   server: 0550cq.com
   port: 443
   type: vless
@@ -278,9 +278,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node12_notls
+- name: node12_notls_12
   server: 0550cq.com
   port: 8080
   type: vless
@@ -290,9 +290,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node13_tls
+- name: node13_tls_13
   server: www.xinpian8.com
   port: 443
   type: vless
@@ -302,9 +302,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node13_notls
+- name: node13_notls_13
   server: www.xinpian8.com
   port: 8080
   type: vless
@@ -314,9 +314,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node14_tls
+- name: node14_tls_14
   server: www.c333.net
   port: 443
   type: vless
@@ -326,9 +326,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node14_notls
+- name: node14_notls_14
   server: www.c333.net
   port: 8080
   type: vless
@@ -338,9 +338,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node15_tls
+- name: node15_tls_15
   server: www.7749tv.com
   port: 443
   type: vless
@@ -350,9 +350,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node15_notls
+- name: node15_notls_15
   server: www.7749tv.com
   port: 8080
   type: vless
@@ -362,9 +362,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node16_tls
+- name: node16_tls_16
   server: www.888dyy.cc
   port: 443
   type: vless
@@ -374,9 +374,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node16_notls
+- name: node16_notls_16
   server: www.888dyy.cc
   port: 8080
   type: vless
@@ -386,9 +386,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node17_tls
+- name: node17_tls_17
   server: manmankan.cc
   port: 443
   type: vless
@@ -398,9 +398,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node17_notls
+- name: node17_notls_17
   server: manmankan.cc
   port: 8080
   type: vless
@@ -410,9 +410,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node18_tls
+- name: node18_tls_18
   server: www.ddwhm.com
   port: 443
   type: vless
@@ -422,9 +422,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node18_notls
+- name: node18_notls_18
   server: www.ddwhm.com
   port: 8080
   type: vless
@@ -434,9 +434,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node19_tls
+- name: node19_tls_19
   server: hao.kenyu.ggff.net
   port: 443
   type: vless
@@ -446,9 +446,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node19_notls
+- name: node19_notls_19
   server: hao.kenyu.ggff.net
   port: 8080
   type: vless
@@ -458,9 +458,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node20_tls
+- name: node20_tls_20
   server: hao.yuba.cloudns.be
   port: 443
   type: vless
@@ -470,9 +470,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node20_notls
+- name: node20_notls_20
   server: hao.yuba.cloudns.be
   port: 8080
   type: vless
@@ -482,9 +482,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node21_tls
+- name: node21_tls_21
   server: hao.yubc.cloudns.be
   port: 443
   type: vless
@@ -494,9 +494,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node21_notls
+- name: node21_notls_21
   server: hao.yubc.cloudns.be
   port: 8080
   type: vless
@@ -506,9 +506,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node22_tls
+- name: node22_tls_22
   server: hao.yubo.cloudns.be
   port: 443
   type: vless
@@ -518,9 +518,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node22_notls
+- name: node22_notls_22
   server: hao.yubo.cloudns.be
   port: 8080
   type: vless
@@ -530,9 +530,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node23_tls
+- name: node23_tls_23
   server: hao.yuba.giize.com
   port: 443
   type: vless
@@ -542,9 +542,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node23_notls
+- name: node23_notls_23
   server: hao.yuba.giize.com
   port: 8080
   type: vless
@@ -554,9 +554,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node24_tls
+- name: node24_tls_24
   server: hao.yubc.giize.com
   port: 443
   type: vless
@@ -566,9 +566,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node24_notls
+- name: node24_notls_24
   server: hao.yubc.giize.com
   port: 8080
   type: vless
@@ -578,9 +578,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node25_tls
+- name: node25_tls_25
   server: hao.yube.giize.com
   port: 443
   type: vless
@@ -590,9 +590,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node25_notls
+- name: node25_notls_25
   server: hao.yube.giize.com
   port: 8080
   type: vless
@@ -602,9 +602,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node26_tls
+- name: node26_tls_26
   server: hao.yubo.giize.com
   port: 443
   type: vless
@@ -614,9 +614,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node26_notls
+- name: node26_notls_26
   server: hao.yubo.giize.com
   port: 8080
   type: vless
@@ -626,9 +626,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node27_tls
+- name: node27_tls_27
   server: hao.yubk.zone.id
   port: 443
   type: vless
@@ -638,9 +638,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node27_notls
+- name: node27_notls_27
   server: hao.yubk.zone.id
   port: 8080
   type: vless
@@ -650,9 +650,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node28_tls
+- name: node28_tls_28
   server: hao.yubp.zone.id
   port: 443
   type: vless
@@ -662,9 +662,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node28_notls
+- name: node28_notls_28
   server: hao.yubp.zone.id
   port: 8080
   type: vless
@@ -674,9 +674,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node29_tls
+- name: node29_tls_29
   server: hao.yubw.zone.id
   port: 443
   type: vless
@@ -686,9 +686,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node29_notls
+- name: node29_notls_29
   server: hao.yubw.zone.id
   port: 8080
   type: vless
@@ -698,9 +698,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node30_tls
+- name: node30_tls_30
   server: hao.yubg.zone.id
   port: 443
   type: vless
@@ -710,9 +710,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node30_notls
+- name: node30_notls_30
   server: hao.yubg.zone.id
   port: 8080
   type: vless
@@ -722,9 +722,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node31_tls
+- name: node31_tls_31
   server: hao.yubn.zone.id
   port: 443
   type: vless
@@ -734,9 +734,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node31_notls
+- name: node31_notls_31
   server: hao.yubn.zone.id
   port: 8080
   type: vless
@@ -746,9 +746,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node32_tls
+- name: node32_tls_32
   server: hao.yubo.zone.id
   port: 443
   type: vless
@@ -758,9 +758,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node32_notls
+- name: node32_notls_32
   server: hao.yubo.zone.id
   port: 8080
   type: vless
@@ -770,9 +770,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node33_tls
+- name: node33_tls_33
   server: hao.hjklin.work.gd
   port: 443
   type: vless
@@ -782,9 +782,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node33_notls
+- name: node33_notls_33
   server: hao.hjklin.work.gd
   port: 8080
   type: vless
@@ -794,9 +794,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node34_tls
+- name: node34_tls_34
   server: hao.linhjk.work.gd
   port: 443
   type: vless
@@ -806,9 +806,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node34_notls
+- name: node34_notls_34
   server: hao.linhjk.work.gd
   port: 8080
   type: vless
@@ -818,9 +818,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node35_tls
+- name: node35_tls_35
   server: hao.yuba.netlib.re
   port: 443
   type: vless
@@ -830,9 +830,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node35_notls
+- name: node35_notls_35
   server: hao.yuba.netlib.re
   port: 8080
   type: vless
@@ -842,9 +842,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node36_tls
+- name: node36_tls_36
   server: hao.yubo.netlib.re
   port: 443
   type: vless
@@ -854,9 +854,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node36_notls
+- name: node36_notls_36
   server: hao.yubo.netlib.re
   port: 8080
   type: vless
@@ -866,9 +866,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node37_tls
+- name: node37_tls_37
   server: hao.boyu.netlib.re
   port: 443
   type: vless
@@ -878,9 +878,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node37_notls
+- name: node37_notls_37
   server: hao.boyu.netlib.re
   port: 8080
   type: vless
@@ -890,9 +890,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node38_tls
+- name: node38_tls_38
   server: 555.yuba.xx.kg
   port: 443
   type: vless
@@ -902,9 +902,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node38_notls
+- name: node38_notls_38
   server: 555.yuba.xx.kg
   port: 8080
   type: vless
@@ -914,9 +914,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node39_tls
+- name: node39_tls_39
   server: 555.yube.xx.kg
   port: 443
   type: vless
@@ -926,9 +926,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node39_notls
+- name: node39_notls_39
   server: 555.yube.xx.kg
   port: 8080
   type: vless
@@ -938,9 +938,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node40_tls
+- name: node40_tls_40
   server: 555.yubc.xx.kg
   port: 443
   type: vless
@@ -950,9 +950,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node40_notls
+- name: node40_notls_40
   server: 555.yubc.xx.kg
   port: 8080
   type: vless
@@ -962,9 +962,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node41_tls
+- name: node41_tls_41
   server: 555.yubo.xx.kg
   port: 443
   type: vless
@@ -974,9 +974,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node41_notls
+- name: node41_notls_41
   server: 555.yubo.xx.kg
   port: 8080
   type: vless
@@ -986,9 +986,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node42_tls
+- name: node42_tls_42
   server: hao.linyubo.work.gd
   port: 443
   type: vless
@@ -998,9 +998,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node42_notls
+- name: node42_notls_42
   server: hao.linyubo.work.gd
   port: 8080
   type: vless
@@ -1010,9 +1010,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node43_tls
+- name: node43_tls_43
   server: hao.asdc345.dynv6.net
   port: 443
   type: vless
@@ -1022,9 +1022,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node43_notls
+- name: node43_notls_43
   server: hao.asdc345.dynv6.net
   port: 8080
   type: vless
@@ -1034,9 +1034,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node44_tls
+- name: node44_tls_44
   server: hao.ehue23.dynv6.net
   port: 443
   type: vless
@@ -1046,9 +1046,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node44_notls
+- name: node44_notls_44
   server: hao.ehue23.dynv6.net
   port: 8080
   type: vless
@@ -1058,9 +1058,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node45_tls
+- name: node45_tls_45
   server: hao.hgmg9322.dynv6.net
   port: 443
   type: vless
@@ -1070,9 +1070,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node45_notls
+- name: node45_notls_45
   server: hao.hgmg9322.dynv6.net
   port: 8080
   type: vless
@@ -1082,9 +1082,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node46_tls
+- name: node46_tls_46
   server: hao.hgmg9323.dns.army
   port: 443
   type: vless
@@ -1094,9 +1094,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node46_notls
+- name: node46_notls_46
   server: hao.hgmg9323.dns.army
   port: 8080
   type: vless
@@ -1106,9 +1106,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node47_tls
+- name: node47_tls_47
   server: hao.hgmg9324.dynv6.net
   port: 443
   type: vless
@@ -1118,9 +1118,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node47_notls
+- name: node47_notls_47
   server: hao.hgmg9324.dynv6.net
   port: 8080
   type: vless
@@ -1130,9 +1130,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node48_tls
+- name: node48_tls_48
   server: hao.zhwlhu01.dynv6.net
   port: 443
   type: vless
@@ -1142,9 +1142,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node48_notls
+- name: node48_notls_48
   server: hao.zhwlhu01.dynv6.net
   port: 8080
   type: vless
@@ -1154,9 +1154,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node49_tls
+- name: node49_tls_49
   server: icook.tw
   port: 443
   type: vless
@@ -1166,9 +1166,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node49_notls
+- name: node49_notls_49
   server: icook.tw
   port: 8080
   type: vless
@@ -1178,9 +1178,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node50_tls
+- name: node50_tls_50
   server: cloudflare.cfgo.cc
   port: 443
   type: vless
@@ -1190,9 +1190,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node50_notls
+- name: node50_notls_50
   server: cloudflare.cfgo.cc
   port: 8080
   type: vless
@@ -1202,9 +1202,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node51_tls
+- name: node51_tls_51
   server: time.cloudflare.com
   port: 443
   type: vless
@@ -1214,9 +1214,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node51_notls
+- name: node51_notls_51
   server: time.cloudflare.com
   port: 8080
   type: vless
@@ -1226,9 +1226,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node52_tls
+- name: node52_tls_52
   server: shopify.com
   port: 443
   type: vless
@@ -1238,9 +1238,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node52_notls
+- name: node52_notls_52
   server: shopify.com
   port: 8080
   type: vless
@@ -1250,9 +1250,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node53_tls
+- name: node53_tls_53
   server: time.is
   port: 443
   type: vless
@@ -1262,9 +1262,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node53_notls
+- name: node53_notls_53
   server: time.is
   port: 8080
   type: vless
@@ -1274,9 +1274,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node54_tls
+- name: node54_tls_54
   server: icook.hk
   port: 443
   type: vless
@@ -1286,9 +1286,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node54_notls
+- name: node54_notls_54
   server: icook.hk
   port: 8080
   type: vless
@@ -1298,9 +1298,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node55_tls
+- name: node55_tls_55
   server: ip.sb
   port: 443
   type: vless
@@ -1310,9 +1310,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node55_notls
+- name: node55_notls_55
   server: ip.sb
   port: 8080
   type: vless
@@ -1322,9 +1322,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node56_tls
+- name: node56_tls_56
   server: japan.com
   port: 443
   type: vless
@@ -1334,9 +1334,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node56_notls
+- name: node56_notls_56
   server: japan.com
   port: 8080
   type: vless
@@ -1346,9 +1346,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node57_tls
+- name: node57_tls_57
   server: malaysia.com
   port: 443
   type: vless
@@ -1358,9 +1358,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node57_notls
+- name: node57_notls_57
   server: malaysia.com
   port: 8080
   type: vless
@@ -1370,9 +1370,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node58_tls
+- name: node58_tls_58
   server: russia.com
   port: 443
   type: vless
@@ -1382,9 +1382,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node58_notls
+- name: node58_notls_58
   server: russia.com
   port: 8080
   type: vless
@@ -1394,9 +1394,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node59_tls
+- name: node59_tls_59
   server: singapore.com
   port: 443
   type: vless
@@ -1406,9 +1406,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node59_notls
+- name: node59_notls_59
   server: singapore.com
   port: 8080
   type: vless
@@ -1418,9 +1418,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node60_tls
+- name: node60_tls_60
   server: skk.moe
   port: 443
   type: vless
@@ -1430,9 +1430,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node60_notls
+- name: node60_notls_60
   server: skk.moe
   port: 8080
   type: vless
@@ -1442,9 +1442,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node61_tls
+- name: node61_tls_61
   server: www.gco.gov.qa
   port: 443
   type: vless
@@ -1454,9 +1454,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node61_notls
+- name: node61_notls_61
   server: www.gco.gov.qa
   port: 8080
   type: vless
@@ -1466,9 +1466,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node62_tls
+- name: node62_tls_62
   server: www.gov.se
   port: 443
   type: vless
@@ -1478,9 +1478,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node62_notls
+- name: node62_notls_62
   server: www.gov.se
   port: 8080
   type: vless
@@ -1490,9 +1490,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node63_tls
+- name: node63_tls_63
   server: www.gov.ua
   port: 443
   type: vless
@@ -1502,9 +1502,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node63_notls
+- name: node63_notls_63
   server: www.gov.ua
   port: 8080
   type: vless
@@ -1514,9 +1514,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node64_tls
+- name: node64_tls_64
   server: www.digitalocean.com
   port: 443
   type: vless
@@ -1526,9 +1526,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node64_notls
+- name: node64_notls_64
   server: www.digitalocean.com
   port: 8080
   type: vless
@@ -1538,9 +1538,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node65_tls
+- name: node65_tls_65
   server: www.csgo.com
   port: 443
   type: vless
@@ -1550,9 +1550,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node65_notls
+- name: node65_notls_65
   server: www.csgo.com
   port: 8080
   type: vless
@@ -1562,9 +1562,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node66_tls
+- name: node66_tls_66
   server: www.whoer.net
   port: 443
   type: vless
@@ -1574,9 +1574,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node66_notls
+- name: node66_notls_66
   server: www.whoer.net
   port: 8080
   type: vless
@@ -1586,9 +1586,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node67_tls
+- name: node67_tls_67
   server: www.whatismyip.com
   port: 443
   type: vless
@@ -1598,9 +1598,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node67_notls
+- name: node67_notls_67
   server: www.whatismyip.com
   port: 8080
   type: vless
@@ -1610,9 +1610,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node68_tls
+- name: node68_tls_68
   server: www.ipget.net
   port: 443
   type: vless
@@ -1622,9 +1622,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node68_notls
+- name: node68_notls_68
   server: www.ipget.net
   port: 8080
   type: vless
@@ -1634,9 +1634,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node69_tls
+- name: node69_tls_69
   server: www.hugedomains.com
   port: 443
   type: vless
@@ -1646,9 +1646,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node69_notls
+- name: node69_notls_69
   server: www.hugedomains.com
   port: 8080
   type: vless
@@ -1658,9 +1658,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node70_tls
+- name: node70_tls_70
   server: www.udacity.com
   port: 443
   type: vless
@@ -1670,9 +1670,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node70_notls
+- name: node70_notls_70
   server: www.udacity.com
   port: 8080
   type: vless
@@ -1682,9 +1682,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node71_tls
+- name: node71_tls_71
   server: www.4chan.org
   port: 443
   type: vless
@@ -1694,9 +1694,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node71_notls
+- name: node71_notls_71
   server: www.4chan.org
   port: 8080
   type: vless
@@ -1706,9 +1706,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node72_tls
+- name: node72_tls_72
   server: www.okcupid.com
   port: 443
   type: vless
@@ -1718,9 +1718,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node72_notls
+- name: node72_notls_72
   server: www.okcupid.com
   port: 8080
   type: vless
@@ -1730,9 +1730,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node73_tls
+- name: node73_tls_73
   server: www.glassdoor.com
   port: 443
   type: vless
@@ -1742,9 +1742,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node73_notls
+- name: node73_notls_73
   server: www.glassdoor.com
   port: 8080
   type: vless
@@ -1754,9 +1754,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node74_tls
+- name: node74_tls_74
   server: www.udemy.com
   port: 443
   type: vless
@@ -1766,9 +1766,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node74_notls
+- name: node74_notls_74
   server: www.udemy.com
   port: 8080
   type: vless
@@ -1778,9 +1778,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node75_tls
+- name: node75_tls_75
   server: alejandracaiccedo.com
   port: 443
   type: vless
@@ -1790,9 +1790,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node75_notls
+- name: node75_notls_75
   server: alejandracaiccedo.com
   port: 8080
   type: vless
@@ -1802,9 +1802,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node76_tls
+- name: node76_tls_76
   server: nc.gocada.co
   port: 443
   type: vless
@@ -1814,9 +1814,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node76_notls
+- name: node76_notls_76
   server: nc.gocada.co
   port: 8080
   type: vless
@@ -1826,9 +1826,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node77_tls
+- name: node77_tls_77
   server: log.bpminecraft.com
   port: 443
   type: vless
@@ -1838,9 +1838,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node77_notls
+- name: node77_notls_77
   server: log.bpminecraft.com
   port: 8080
   type: vless
@@ -1850,9 +1850,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node78_tls
+- name: node78_tls_78
   server: www.boba88slot.com
   port: 443
   type: vless
@@ -1862,9 +1862,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node78_notls
+- name: node78_notls_78
   server: www.boba88slot.com
   port: 8080
   type: vless
@@ -1874,9 +1874,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node79_tls
+- name: node79_tls_79
   server: gur.gov.ua
   port: 443
   type: vless
@@ -1886,9 +1886,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node79_notls
+- name: node79_notls_79
   server: gur.gov.ua
   port: 8080
   type: vless
@@ -1898,9 +1898,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node80_tls
+- name: node80_tls_80
   server: www.zsu.gov.ua
   port: 443
   type: vless
@@ -1910,9 +1910,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node80_notls
+- name: node80_notls_80
   server: www.zsu.gov.ua
   port: 8080
   type: vless
@@ -1922,9 +1922,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node81_tls
+- name: node81_tls_81
   server: www.iakeys.com
   port: 443
   type: vless
@@ -1934,9 +1934,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node81_notls
+- name: node81_notls_81
   server: www.iakeys.com
   port: 8080
   type: vless
@@ -1946,9 +1946,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node82_tls
+- name: node82_tls_82
   server: www.d-555.com
   port: 443
   type: vless
@@ -1958,9 +1958,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node82_notls
+- name: node82_notls_82
   server: www.d-555.com
   port: 8080
   type: vless
@@ -1970,9 +1970,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node83_tls
+- name: node83_tls_83
   server: fbi.gov
   port: 443
   type: vless
@@ -1982,9 +1982,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node83_notls
+- name: node83_notls_83
   server: fbi.gov
   port: 8080
   type: vless
@@ -1994,9 +1994,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node84_tls
+- name: node84_tls_84
   server: www.wto.org
   port: 443
   type: vless
@@ -2006,9 +2006,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node84_notls
+- name: node84_notls_84
   server: www.wto.org
   port: 8080
   type: vless
@@ -2018,9 +2018,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node85_tls
+- name: node85_tls_85
   server: www.who.int
   port: 443
   type: vless
@@ -2030,9 +2030,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node85_notls
+- name: node85_notls_85
   server: www.who.int
   port: 8080
   type: vless
@@ -2042,9 +2042,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node86_tls
+- name: node86_tls_86
   server: www.visa.com.hk
   port: 443
   type: vless
@@ -2054,9 +2054,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node86_notls
+- name: node86_notls_86
   server: www.visa.com.hk
   port: 8080
   type: vless
@@ -2066,9 +2066,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node87_tls
+- name: node87_tls_87
   server: www.visa.com.sg
   port: 443
   type: vless
@@ -2078,9 +2078,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node87_notls
+- name: node87_notls_87
   server: www.visa.com.sg
   port: 8080
   type: vless
@@ -2090,9 +2090,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node88_tls
+- name: node88_tls_88
   server: www.visa.com
   port: 443
   type: vless
@@ -2102,9 +2102,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node88_notls
+- name: node88_notls_88
   server: www.visa.com
   port: 8080
   type: vless
@@ -2114,9 +2114,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node89_tls
+- name: node89_tls_89
   server: www.visa.co.jp
   port: 443
   type: vless
@@ -2126,9 +2126,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node89_notls
+- name: node89_notls_89
   server: www.visa.co.jp
   port: 8080
   type: vless
@@ -2138,9 +2138,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node90_tls
+- name: node90_tls_90
   server: www.visakorea.com
   port: 443
   type: vless
@@ -2150,9 +2150,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node90_notls
+- name: node90_notls_90
   server: www.visakorea.com
   port: 8080
   type: vless
@@ -2162,9 +2162,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node91_tls
+- name: node91_tls_91
   server: www.ipchicken.com
   port: 443
   type: vless
@@ -2174,9 +2174,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node91_notls
+- name: node91_notls_91
   server: www.ipchicken.com
   port: 8080
   type: vless
@@ -2186,9 +2186,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node92_tls
+- name: node92_tls_92
   server: download.yunzhongzhuan.com
   port: 443
   type: vless
@@ -2198,9 +2198,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node92_notls
+- name: node92_notls_92
   server: download.yunzhongzhuan.com
   port: 8080
   type: vless
@@ -2210,9 +2210,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node93_tls
+- name: node93_tls_93
   server: iplocation.io
   port: 443
   type: vless
@@ -2222,9 +2222,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node93_notls
+- name: node93_notls_93
   server: iplocation.io
   port: 8080
   type: vless
@@ -2234,9 +2234,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node94_tls
+- name: node94_tls_94
   server: iplocation.net
   port: 443
   type: vless
@@ -2246,9 +2246,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node94_notls
+- name: node94_notls_94
   server: iplocation.net
   port: 8080
   type: vless
@@ -2258,9 +2258,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node95_tls
+- name: node95_tls_95
   server: whatismyipaddress.com
   port: 443
   type: vless
@@ -2270,9 +2270,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node95_notls
+- name: node95_notls_95
   server: whatismyipaddress.com
   port: 8080
   type: vless
@@ -2282,9 +2282,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node96_tls
+- name: node96_tls_96
   server: www.baipiao.eu.org
   port: 443
   type: vless
@@ -2294,9 +2294,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node96_notls
+- name: node96_notls_96
   server: www.baipiao.eu.org
   port: 8080
   type: vless
@@ -2306,9 +2306,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node97_tls
+- name: node97_tls_97
   server: edtunnel-dgp.pages.dev
   port: 443
   type: vless
@@ -2318,9 +2318,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node97_notls
+- name: node97_notls_97
   server: edtunnel-dgp.pages.dev
   port: 8080
   type: vless
@@ -2330,9 +2330,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node98_tls
+- name: node98_tls_98
   server: www.pcmag.com
   port: 443
   type: vless
@@ -2342,9 +2342,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node98_notls
+- name: node98_notls_98
   server: www.pcmag.com
   port: 8080
   type: vless
@@ -2354,9 +2354,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node99_tls
+- name: node99_tls_99
   server: www.visa.com.tw
   port: 443
   type: vless
@@ -2366,9 +2366,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node99_notls
+- name: node99_notls_99
   server: www.visa.com.tw
   port: 8080
   type: vless
@@ -2378,9 +2378,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node100_tls
+- name: node100_tls_100
   server: www.sean-now.com
   port: 443
   type: vless
@@ -2390,9 +2390,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node100_notls
+- name: node100_notls_100
   server: www.sean-now.com
   port: 8080
   type: vless
@@ -2402,9 +2402,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node101_tls
+- name: node101_tls_101
   server: cf-lt.sharecentre.online
   port: 443
   type: vless
@@ -2414,9 +2414,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node101_notls
+- name: node101_notls_101
   server: cf-lt.sharecentre.online
   port: 8080
   type: vless
@@ -2426,9 +2426,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node102_tls
+- name: node102_tls_102
   server: huaihuaiku.com
   port: 443
   type: vless
@@ -2438,9 +2438,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node102_notls
+- name: node102_notls_102
   server: huaihuaiku.com
   port: 8080
   type: vless
@@ -2450,9 +2450,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node103_tls
+- name: node103_tls_103
   server: visa.com
   port: 443
   type: vless
@@ -2462,9 +2462,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node103_notls
+- name: node103_notls_103
   server: visa.com
   port: 8080
   type: vless
@@ -2474,9 +2474,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node104_tls
+- name: node104_tls_104
   server: cdn.dockerpull.xyz
   port: 443
   type: vless
@@ -2486,9 +2486,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node104_notls
+- name: node104_notls_104
   server: cdn.dockerpull.xyz
   port: 8080
   type: vless
@@ -2498,9 +2498,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node105_tls
+- name: node105_tls_105
   server: omofun.link
   port: 443
   type: vless
@@ -2510,9 +2510,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node105_notls
+- name: node105_notls_105
   server: omofun.link
   port: 8080
   type: vless
@@ -2522,9 +2522,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node106_tls
+- name: node106_tls_106
   server: visakorea.com
   port: 443
   type: vless
@@ -2534,9 +2534,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node106_notls
+- name: node106_notls_106
   server: visakorea.com
   port: 8080
   type: vless
@@ -2546,9 +2546,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node107_tls
+- name: node107_tls_107
   server: xxk555.com
   port: 443
   type: vless
@@ -2558,9 +2558,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node107_notls
+- name: node107_notls_107
   server: xxk555.com
   port: 8080
   type: vless
@@ -2570,9 +2570,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node108_tls
+- name: node108_tls_108
   server: proxyip.hk.hw.090227.xyz
   port: 443
   type: vless
@@ -2582,9 +2582,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node108_notls
+- name: node108_notls_108
   server: proxyip.hk.hw.090227.xyz
   port: 8080
   type: vless
@@ -2594,9 +2594,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node109_tls
+- name: node109_tls_109
   server: www.multihousingnews.com
   port: 443
   type: vless
@@ -2606,9 +2606,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node109_notls
+- name: node109_notls_109
   server: www.multihousingnews.com
   port: 8080
   type: vless
@@ -2618,9 +2618,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node110_tls
+- name: node110_tls_110
   server: huaihuaimu.net
   port: 443
   type: vless
@@ -2630,9 +2630,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node110_notls
+- name: node110_notls_110
   server: huaihuaimu.net
   port: 8080
   type: vless
@@ -2642,9 +2642,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node111_tls
+- name: node111_tls_111
   server: cdn.cmliu.net
   port: 443
   type: vless
@@ -2654,9 +2654,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node111_notls
+- name: node111_notls_111
   server: cdn.cmliu.net
   port: 8080
   type: vless
@@ -2666,9 +2666,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node112_tls
+- name: node112_tls_112
   server: www.7749tv.com
   port: 443
   type: vless
@@ -2678,9 +2678,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node112_notls
+- name: node112_notls_112
   server: www.7749tv.com
   port: 8080
   type: vless
@@ -2690,9 +2690,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node113_tls
+- name: node113_tls_113
   server: www.baiitv.com
   port: 443
   type: vless
@@ -2702,9 +2702,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node113_notls
+- name: node113_notls_113
   server: www.baiitv.com
   port: 8080
   type: vless
@@ -2714,9 +2714,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node114_tls
+- name: node114_tls_114
   server: visa.com.au
   port: 443
   type: vless
@@ -2726,9 +2726,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node114_notls
+- name: node114_notls_114
   server: visa.com.au
   port: 8080
   type: vless
@@ -2738,9 +2738,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node115_tls
+- name: node115_tls_115
   server: proxyip.jp.fxxk.dedyn.io
   port: 443
   type: vless
@@ -2750,9 +2750,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node115_notls
+- name: node115_notls_115
   server: proxyip.jp.fxxk.dedyn.io
   port: 8080
   type: vless
@@ -2762,9 +2762,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node116_tls
+- name: node116_tls_116
   server: proxyip.digitalocean.fxxk.dedyn.io
   port: 443
   type: vless
@@ -2774,9 +2774,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node116_notls
+- name: node116_notls_116
   server: proxyip.digitalocean.fxxk.dedyn.io
   port: 8080
   type: vless
@@ -2786,9 +2786,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node117_tls
+- name: node117_tls_117
   server: proxyip.sg.cmliussss.net
   port: 443
   type: vless
@@ -2798,9 +2798,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node117_notls
+- name: node117_notls_117
   server: proxyip.sg.cmliussss.net
   port: 8080
   type: vless
@@ -2810,9 +2810,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node118_tls
+- name: node118_tls_118
   server: www.dy1255.com
   port: 443
   type: vless
@@ -2822,9 +2822,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node118_notls
+- name: node118_notls_118
   server: www.dy1255.com
   port: 8080
   type: vless
@@ -2834,9 +2834,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node119_tls
+- name: node119_tls_119
   server: proxyip.us.cmliussss.net
   port: 443
   type: vless
@@ -2846,9 +2846,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node119_notls
+- name: node119_notls_119
   server: proxyip.us.cmliussss.net
   port: 8080
   type: vless
@@ -2858,9 +2858,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node120_tls
+- name: node120_tls_120
   server: www.96dushu.com
   port: 443
   type: vless
@@ -2870,9 +2870,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node120_notls
+- name: node120_notls_120
   server: www.96dushu.com
   port: 8080
   type: vless
@@ -2882,9 +2882,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node121_tls
+- name: node121_tls_121
   server: www.wogg.one
   port: 443
   type: vless
@@ -2894,9 +2894,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node121_notls
+- name: node121_notls_121
   server: www.wogg.one
   port: 8080
   type: vless
@@ -2906,9 +2906,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node122_tls
+- name: node122_tls_122
   server: blog.985864.xyz
   port: 443
   type: vless
@@ -2918,9 +2918,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node122_notls
+- name: node122_notls_122
   server: blog.985864.xyz
   port: 8080
   type: vless
@@ -2930,9 +2930,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node123_tls
+- name: node123_tls_123
   server: evan.brucewen.ip-ddns.com
   port: 443
   type: vless
@@ -2942,9 +2942,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node123_notls
+- name: node123_notls_123
   server: evan.brucewen.ip-ddns.com
   port: 8080
   type: vless
@@ -2954,9 +2954,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node124_tls
+- name: node124_tls_124
   server: ashton.ns.cloudflare.com
   port: 443
   type: vless
@@ -2966,9 +2966,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node124_notls
+- name: node124_notls_124
   server: ashton.ns.cloudflare.com
   port: 8080
   type: vless
@@ -2978,9 +2978,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node125_tls
+- name: node125_tls_125
   server: abdullah.ns.cloudflare.com
   port: 443
   type: vless
@@ -2990,9 +2990,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node125_notls
+- name: node125_notls_125
   server: abdullah.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3002,9 +3002,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node126_tls
+- name: node126_tls_126
   server: bowen.ns.cloudflare.com
   port: 443
   type: vless
@@ -3014,9 +3014,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node126_notls
+- name: node126_notls_126
   server: bowen.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3026,9 +3026,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node127_tls
+- name: node127_tls_127
   server: benedict.ns.cloudflare.com
   port: 443
   type: vless
@@ -3038,9 +3038,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node127_notls
+- name: node127_notls_127
   server: benedict.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3050,9 +3050,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node128_tls
+- name: node128_tls_128
   server: braden.ns.cloudflare.com
   port: 443
   type: vless
@@ -3062,9 +3062,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node128_notls
+- name: node128_notls_128
   server: braden.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3074,9 +3074,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node129_tls
+- name: node129_tls_129
   server: cris.ns.cloudflare.com
   port: 443
   type: vless
@@ -3086,9 +3086,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node129_notls
+- name: node129_notls_129
   server: cris.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3098,9 +3098,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node130_tls
+- name: node130_tls_130
   server: craig.ns.cloudflare.com
   port: 443
   type: vless
@@ -3110,9 +3110,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node130_notls
+- name: node130_notls_130
   server: craig.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3122,9 +3122,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node131_tls
+- name: node131_tls_131
   server: decker.ns.cloudflare.com
   port: 443
   type: vless
@@ -3134,9 +3134,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node131_notls
+- name: node131_notls_131
   server: decker.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3146,9 +3146,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node132_tls
+- name: node132_tls_132
   server: damien.ns.cloudflare.com
   port: 443
   type: vless
@@ -3158,9 +3158,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node132_notls
+- name: node132_notls_132
   server: damien.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3170,9 +3170,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node133_tls
+- name: node133_tls_133
   server: dylan.ns.cloudflare.com
   port: 443
   type: vless
@@ -3182,9 +3182,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node133_notls
+- name: node133_notls_133
   server: dylan.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3194,9 +3194,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node134_tls
+- name: node134_tls_134
   server: huxley.ns.cloudflare.com
   port: 443
   type: vless
@@ -3206,9 +3206,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node134_notls
+- name: node134_notls_134
   server: huxley.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3218,9 +3218,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node135_tls
+- name: node135_tls_135
   server: julio.ns.cloudflare.com
   port: 443
   type: vless
@@ -3230,9 +3230,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node135_notls
+- name: node135_notls_135
   server: julio.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3242,9 +3242,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node136_tls
+- name: node136_tls_136
   server: kyree.ns.cloudflare.com
   port: 443
   type: vless
@@ -3254,9 +3254,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node136_notls
+- name: node136_notls_136
   server: kyree.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3266,9 +3266,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node137_tls
+- name: node137_tls_137
   server: lewis.ns.cloudflare.com
   port: 443
   type: vless
@@ -3278,9 +3278,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node137_notls
+- name: node137_notls_137
   server: lewis.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3290,9 +3290,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node138_tls
+- name: node138_tls_138
   server: moura.ns.cloudflare.com
   port: 443
   type: vless
@@ -3302,9 +3302,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node138_notls
+- name: node138_notls_138
   server: moura.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3314,9 +3314,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node139_tls
+- name: node139_tls_139
   server: nikon.ns.cloudflare.com
   port: 443
   type: vless
@@ -3326,9 +3326,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node139_notls
+- name: node139_notls_139
   server: nikon.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3338,9 +3338,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node140_tls
+- name: node140_tls_140
   server: otto.ns.cloudflare.com
   port: 443
   type: vless
@@ -3350,9 +3350,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node140_notls
+- name: node140_notls_140
   server: otto.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3362,9 +3362,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node141_tls
+- name: node141_tls_141
   server: pranab.ns.cloudflare.com
   port: 443
   type: vless
@@ -3374,9 +3374,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node141_notls
+- name: node141_notls_141
   server: pranab.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3386,9 +3386,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node142_tls
+- name: node142_tls_142
   server: rustam.ns.cloudflare.com
   port: 443
   type: vless
@@ -3398,9 +3398,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node142_notls
+- name: node142_notls_142
   server: rustam.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3410,9 +3410,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node143_tls
+- name: node143_tls_143
   server: sullivan.ns.cloudflare.com
   port: 443
   type: vless
@@ -3422,9 +3422,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node143_notls
+- name: node143_notls_143
   server: sullivan.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3434,9 +3434,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node144_tls
+- name: node144_tls_144
   server: trevor.ns.cloudflare.com
   port: 443
   type: vless
@@ -3446,9 +3446,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node144_notls
+- name: node144_notls_144
   server: trevor.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3458,9 +3458,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node145_tls
+- name: node145_tls_145
   server: uriah.ns.cloudflare.com
   port: 443
   type: vless
@@ -3470,9 +3470,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node145_notls
+- name: node145_notls_145
   server: uriah.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3482,9 +3482,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node146_tls
+- name: node146_tls_146
   server: wilson.ns.cloudflare.com
   port: 443
   type: vless
@@ -3494,9 +3494,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node146_notls
+- name: node146_notls_146
   server: wilson.ns.cloudflare.com
   port: 8080
   type: vless
@@ -3506,9 +3506,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node147_tls
+- name: node147_tls_147
   server: stock.hostmonit.com
   port: 443
   type: vless
@@ -3518,9 +3518,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node147_notls
+- name: node147_notls_147
   server: stock.hostmonit.com
   port: 8080
   type: vless
@@ -3530,9 +3530,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node148_tls
+- name: node148_tls_148
   server: www.tushencn.com
   port: 443
   type: vless
@@ -3542,9 +3542,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node148_notls
+- name: node148_notls_148
   server: www.tushencn.com
   port: 8080
   type: vless
@@ -3554,9 +3554,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node149_tls
+- name: node149_tls_149
   server: manmankan.cc
   port: 443
   type: vless
@@ -3566,9 +3566,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node149_notls
+- name: node149_notls_149
   server: manmankan.cc
   port: 8080
   type: vless
@@ -3578,9 +3578,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node150_tls
+- name: node150_tls_150
   server: www.ddwhm.com
   port: 443
   type: vless
@@ -3590,9 +3590,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node150_notls
+- name: node150_notls_150
   server: www.ddwhm.com
   port: 8080
   type: vless
@@ -3602,9 +3602,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node151_tls
+- name: node151_tls_151
   server: ipinfo.in
   port: 443
   type: vless
@@ -3614,9 +3614,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node151_notls
+- name: node151_notls_151
   server: ipinfo.in
   port: 8080
   type: vless
@@ -3626,9 +3626,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node152_tls
+- name: node152_tls_152
   server: gamer.com.tw
   port: 443
   type: vless
@@ -3638,9 +3638,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node152_notls
+- name: node152_notls_152
   server: gamer.com.tw
   port: 8080
   type: vless
@@ -3650,9 +3650,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node153_tls
+- name: node153_tls_153
   server: steamdb.info
   port: 443
   type: vless
@@ -3662,9 +3662,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node153_notls
+- name: node153_notls_153
   server: steamdb.info
   port: 8080
   type: vless
@@ -3674,9 +3674,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node154_tls
+- name: node154_tls_154
   server: toy-people.com
   port: 443
   type: vless
@@ -3686,9 +3686,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node154_notls
+- name: node154_notls_154
   server: toy-people.com
   port: 8080
   type: vless
@@ -3698,9 +3698,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node155_tls
+- name: node155_tls_155
   server: silkbook.com
   port: 443
   type: vless
@@ -3710,9 +3710,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node155_notls
+- name: node155_notls_155
   server: silkbook.com
   port: 8080
   type: vless
@@ -3722,9 +3722,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node156_tls
+- name: node156_tls_156
   server: ipv4.ip.sb
   port: 443
   type: vless
@@ -3734,9 +3734,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node156_notls
+- name: node156_notls_156
   server: ipv4.ip.sb
   port: 8080
   type: vless
@@ -3746,9 +3746,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node157_tls
+- name: node157_tls_157
   server: ip.gs
   port: 443
   type: vless
@@ -3758,9 +3758,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node157_notls
+- name: node157_notls_157
   server: ip.gs
   port: 8080
   type: vless
@@ -3770,9 +3770,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node158_tls
+- name: node158_tls_158
   server: dnschecker.org
   port: 443
   type: vless
@@ -3782,9 +3782,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node158_notls
+- name: node158_notls_158
   server: dnschecker.org
   port: 8080
   type: vless
@@ -3794,9 +3794,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node159_tls
+- name: node159_tls_159
   server: tasteatlas.com
   port: 443
   type: vless
@@ -3806,9 +3806,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node159_notls
+- name: node159_notls_159
   server: tasteatlas.com
   port: 8080
   type: vless
@@ -3818,9 +3818,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node160_tls
+- name: node160_tls_160
   server: pixiv.net
   port: 443
   type: vless
@@ -3830,9 +3830,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node160_notls
+- name: node160_notls_160
   server: pixiv.net
   port: 8080
   type: vless
@@ -3842,9 +3842,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node161_tls
+- name: node161_tls_161
   server: comicabc.com
   port: 443
   type: vless
@@ -3854,9 +3854,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node161_notls
+- name: node161_notls_161
   server: comicabc.com
   port: 8080
   type: vless
@@ -3866,9 +3866,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node162_tls
+- name: node162_tls_162
   server: c.xf.free.hr
   port: 443
   type: vless
@@ -3878,9 +3878,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node162_notls
+- name: node162_notls_162
   server: c.xf.free.hr
   port: 8080
   type: vless
@@ -3890,9 +3890,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node163_tls
+- name: node163_tls_163
   server: yecaoyun.com
   port: 443
   type: vless
@@ -3902,9 +3902,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node163_notls
+- name: node163_notls_163
   server: yecaoyun.com
   port: 8080
   type: vless
@@ -3914,9 +3914,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node164_tls
+- name: node164_tls_164
   server: https://raw.githubusercontent.com/hjpwyb/WYBWYB/refs/heads/main/scripts/bbb/port.txt
   port: 443
   type: vless
@@ -3926,9 +3926,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node164_notls
+- name: node164_notls_164
   server: https://raw.githubusercontent.com/hjpwyb/WYBWYB/refs/heads/main/scripts/bbb/port.txt
   port: 8080
   type: vless
@@ -3938,9 +3938,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node165_tls
+- name: node165_tls_165
   server: https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.txt
   port: 443
   type: vless
@@ -3950,9 +3950,9 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
-- name: node165_notls
+- name: node165_notls_165
   server: https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.txt
   port: 8080
   type: vless
@@ -3962,678 +3962,678 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 proxy-groups:
-- name: 节点选择
+- name: 节点选择_auto
   type: select
   proxies:
-  - node1_tls
-  - node1_notls
-  - node2_tls
-  - node2_notls
-  - node3_tls
-  - node3_notls
-  - node4_tls
-  - node4_notls
-  - node5_tls
-  - node5_notls
-  - node6_tls
-  - node6_notls
-  - node7_tls
-  - node7_notls
-  - node8_tls
-  - node8_notls
-  - node9_tls
-  - node9_notls
-  - node10_tls
-  - node10_notls
-  - node11_tls
-  - node11_notls
-  - node12_tls
-  - node12_notls
-  - node13_tls
-  - node13_notls
-  - node14_tls
-  - node14_notls
-  - node15_tls
-  - node15_notls
-  - node16_tls
-  - node16_notls
-  - node17_tls
-  - node17_notls
-  - node18_tls
-  - node18_notls
-  - node19_tls
-  - node19_notls
-  - node20_tls
-  - node20_notls
-  - node21_tls
-  - node21_notls
-  - node22_tls
-  - node22_notls
-  - node23_tls
-  - node23_notls
-  - node24_tls
-  - node24_notls
-  - node25_tls
-  - node25_notls
-  - node26_tls
-  - node26_notls
-  - node27_tls
-  - node27_notls
-  - node28_tls
-  - node28_notls
-  - node29_tls
-  - node29_notls
-  - node30_tls
-  - node30_notls
-  - node31_tls
-  - node31_notls
-  - node32_tls
-  - node32_notls
-  - node33_tls
-  - node33_notls
-  - node34_tls
-  - node34_notls
-  - node35_tls
-  - node35_notls
-  - node36_tls
-  - node36_notls
-  - node37_tls
-  - node37_notls
-  - node38_tls
-  - node38_notls
-  - node39_tls
-  - node39_notls
-  - node40_tls
-  - node40_notls
-  - node41_tls
-  - node41_notls
-  - node42_tls
-  - node42_notls
-  - node43_tls
-  - node43_notls
-  - node44_tls
-  - node44_notls
-  - node45_tls
-  - node45_notls
-  - node46_tls
-  - node46_notls
-  - node47_tls
-  - node47_notls
-  - node48_tls
-  - node48_notls
-  - node49_tls
-  - node49_notls
-  - node50_tls
-  - node50_notls
-  - node51_tls
-  - node51_notls
-  - node52_tls
-  - node52_notls
-  - node53_tls
-  - node53_notls
-  - node54_tls
-  - node54_notls
-  - node55_tls
-  - node55_notls
-  - node56_tls
-  - node56_notls
-  - node57_tls
-  - node57_notls
-  - node58_tls
-  - node58_notls
-  - node59_tls
-  - node59_notls
-  - node60_tls
-  - node60_notls
-  - node61_tls
-  - node61_notls
-  - node62_tls
-  - node62_notls
-  - node63_tls
-  - node63_notls
-  - node64_tls
-  - node64_notls
-  - node65_tls
-  - node65_notls
-  - node66_tls
-  - node66_notls
-  - node67_tls
-  - node67_notls
-  - node68_tls
-  - node68_notls
-  - node69_tls
-  - node69_notls
-  - node70_tls
-  - node70_notls
-  - node71_tls
-  - node71_notls
-  - node72_tls
-  - node72_notls
-  - node73_tls
-  - node73_notls
-  - node74_tls
-  - node74_notls
-  - node75_tls
-  - node75_notls
-  - node76_tls
-  - node76_notls
-  - node77_tls
-  - node77_notls
-  - node78_tls
-  - node78_notls
-  - node79_tls
-  - node79_notls
-  - node80_tls
-  - node80_notls
-  - node81_tls
-  - node81_notls
-  - node82_tls
-  - node82_notls
-  - node83_tls
-  - node83_notls
-  - node84_tls
-  - node84_notls
-  - node85_tls
-  - node85_notls
-  - node86_tls
-  - node86_notls
-  - node87_tls
-  - node87_notls
-  - node88_tls
-  - node88_notls
-  - node89_tls
-  - node89_notls
-  - node90_tls
-  - node90_notls
-  - node91_tls
-  - node91_notls
-  - node92_tls
-  - node92_notls
-  - node93_tls
-  - node93_notls
-  - node94_tls
-  - node94_notls
-  - node95_tls
-  - node95_notls
-  - node96_tls
-  - node96_notls
-  - node97_tls
-  - node97_notls
-  - node98_tls
-  - node98_notls
-  - node99_tls
-  - node99_notls
-  - node100_tls
-  - node100_notls
-  - node101_tls
-  - node101_notls
-  - node102_tls
-  - node102_notls
-  - node103_tls
-  - node103_notls
-  - node104_tls
-  - node104_notls
-  - node105_tls
-  - node105_notls
-  - node106_tls
-  - node106_notls
-  - node107_tls
-  - node107_notls
-  - node108_tls
-  - node108_notls
-  - node109_tls
-  - node109_notls
-  - node110_tls
-  - node110_notls
-  - node111_tls
-  - node111_notls
-  - node112_tls
-  - node112_notls
-  - node113_tls
-  - node113_notls
-  - node114_tls
-  - node114_notls
-  - node115_tls
-  - node115_notls
-  - node116_tls
-  - node116_notls
-  - node117_tls
-  - node117_notls
-  - node118_tls
-  - node118_notls
-  - node119_tls
-  - node119_notls
-  - node120_tls
-  - node120_notls
-  - node121_tls
-  - node121_notls
-  - node122_tls
-  - node122_notls
-  - node123_tls
-  - node123_notls
-  - node124_tls
-  - node124_notls
-  - node125_tls
-  - node125_notls
-  - node126_tls
-  - node126_notls
-  - node127_tls
-  - node127_notls
-  - node128_tls
-  - node128_notls
-  - node129_tls
-  - node129_notls
-  - node130_tls
-  - node130_notls
-  - node131_tls
-  - node131_notls
-  - node132_tls
-  - node132_notls
-  - node133_tls
-  - node133_notls
-  - node134_tls
-  - node134_notls
-  - node135_tls
-  - node135_notls
-  - node136_tls
-  - node136_notls
-  - node137_tls
-  - node137_notls
-  - node138_tls
-  - node138_notls
-  - node139_tls
-  - node139_notls
-  - node140_tls
-  - node140_notls
-  - node141_tls
-  - node141_notls
-  - node142_tls
-  - node142_notls
-  - node143_tls
-  - node143_notls
-  - node144_tls
-  - node144_notls
-  - node145_tls
-  - node145_notls
-  - node146_tls
-  - node146_notls
-  - node147_tls
-  - node147_notls
-  - node148_tls
-  - node148_notls
-  - node149_tls
-  - node149_notls
-  - node150_tls
-  - node150_notls
-  - node151_tls
-  - node151_notls
-  - node152_tls
-  - node152_notls
-  - node153_tls
-  - node153_notls
-  - node154_tls
-  - node154_notls
-  - node155_tls
-  - node155_notls
-  - node156_tls
-  - node156_notls
-  - node157_tls
-  - node157_notls
-  - node158_tls
-  - node158_notls
-  - node159_tls
-  - node159_notls
-  - node160_tls
-  - node160_notls
-  - node161_tls
-  - node161_notls
-  - node162_tls
-  - node162_notls
-  - node163_tls
-  - node163_notls
-  - node164_tls
-  - node164_notls
-  - node165_tls
-  - node165_notls
+  - node1_tls_1
+  - node1_notls_1
+  - node2_tls_2
+  - node2_notls_2
+  - node3_tls_3
+  - node3_notls_3
+  - node4_tls_4
+  - node4_notls_4
+  - node5_tls_5
+  - node5_notls_5
+  - node6_tls_6
+  - node6_notls_6
+  - node7_tls_7
+  - node7_notls_7
+  - node8_tls_8
+  - node8_notls_8
+  - node9_tls_9
+  - node9_notls_9
+  - node10_tls_10
+  - node10_notls_10
+  - node11_tls_11
+  - node11_notls_11
+  - node12_tls_12
+  - node12_notls_12
+  - node13_tls_13
+  - node13_notls_13
+  - node14_tls_14
+  - node14_notls_14
+  - node15_tls_15
+  - node15_notls_15
+  - node16_tls_16
+  - node16_notls_16
+  - node17_tls_17
+  - node17_notls_17
+  - node18_tls_18
+  - node18_notls_18
+  - node19_tls_19
+  - node19_notls_19
+  - node20_tls_20
+  - node20_notls_20
+  - node21_tls_21
+  - node21_notls_21
+  - node22_tls_22
+  - node22_notls_22
+  - node23_tls_23
+  - node23_notls_23
+  - node24_tls_24
+  - node24_notls_24
+  - node25_tls_25
+  - node25_notls_25
+  - node26_tls_26
+  - node26_notls_26
+  - node27_tls_27
+  - node27_notls_27
+  - node28_tls_28
+  - node28_notls_28
+  - node29_tls_29
+  - node29_notls_29
+  - node30_tls_30
+  - node30_notls_30
+  - node31_tls_31
+  - node31_notls_31
+  - node32_tls_32
+  - node32_notls_32
+  - node33_tls_33
+  - node33_notls_33
+  - node34_tls_34
+  - node34_notls_34
+  - node35_tls_35
+  - node35_notls_35
+  - node36_tls_36
+  - node36_notls_36
+  - node37_tls_37
+  - node37_notls_37
+  - node38_tls_38
+  - node38_notls_38
+  - node39_tls_39
+  - node39_notls_39
+  - node40_tls_40
+  - node40_notls_40
+  - node41_tls_41
+  - node41_notls_41
+  - node42_tls_42
+  - node42_notls_42
+  - node43_tls_43
+  - node43_notls_43
+  - node44_tls_44
+  - node44_notls_44
+  - node45_tls_45
+  - node45_notls_45
+  - node46_tls_46
+  - node46_notls_46
+  - node47_tls_47
+  - node47_notls_47
+  - node48_tls_48
+  - node48_notls_48
+  - node49_tls_49
+  - node49_notls_49
+  - node50_tls_50
+  - node50_notls_50
+  - node51_tls_51
+  - node51_notls_51
+  - node52_tls_52
+  - node52_notls_52
+  - node53_tls_53
+  - node53_notls_53
+  - node54_tls_54
+  - node54_notls_54
+  - node55_tls_55
+  - node55_notls_55
+  - node56_tls_56
+  - node56_notls_56
+  - node57_tls_57
+  - node57_notls_57
+  - node58_tls_58
+  - node58_notls_58
+  - node59_tls_59
+  - node59_notls_59
+  - node60_tls_60
+  - node60_notls_60
+  - node61_tls_61
+  - node61_notls_61
+  - node62_tls_62
+  - node62_notls_62
+  - node63_tls_63
+  - node63_notls_63
+  - node64_tls_64
+  - node64_notls_64
+  - node65_tls_65
+  - node65_notls_65
+  - node66_tls_66
+  - node66_notls_66
+  - node67_tls_67
+  - node67_notls_67
+  - node68_tls_68
+  - node68_notls_68
+  - node69_tls_69
+  - node69_notls_69
+  - node70_tls_70
+  - node70_notls_70
+  - node71_tls_71
+  - node71_notls_71
+  - node72_tls_72
+  - node72_notls_72
+  - node73_tls_73
+  - node73_notls_73
+  - node74_tls_74
+  - node74_notls_74
+  - node75_tls_75
+  - node75_notls_75
+  - node76_tls_76
+  - node76_notls_76
+  - node77_tls_77
+  - node77_notls_77
+  - node78_tls_78
+  - node78_notls_78
+  - node79_tls_79
+  - node79_notls_79
+  - node80_tls_80
+  - node80_notls_80
+  - node81_tls_81
+  - node81_notls_81
+  - node82_tls_82
+  - node82_notls_82
+  - node83_tls_83
+  - node83_notls_83
+  - node84_tls_84
+  - node84_notls_84
+  - node85_tls_85
+  - node85_notls_85
+  - node86_tls_86
+  - node86_notls_86
+  - node87_tls_87
+  - node87_notls_87
+  - node88_tls_88
+  - node88_notls_88
+  - node89_tls_89
+  - node89_notls_89
+  - node90_tls_90
+  - node90_notls_90
+  - node91_tls_91
+  - node91_notls_91
+  - node92_tls_92
+  - node92_notls_92
+  - node93_tls_93
+  - node93_notls_93
+  - node94_tls_94
+  - node94_notls_94
+  - node95_tls_95
+  - node95_notls_95
+  - node96_tls_96
+  - node96_notls_96
+  - node97_tls_97
+  - node97_notls_97
+  - node98_tls_98
+  - node98_notls_98
+  - node99_tls_99
+  - node99_notls_99
+  - node100_tls_100
+  - node100_notls_100
+  - node101_tls_101
+  - node101_notls_101
+  - node102_tls_102
+  - node102_notls_102
+  - node103_tls_103
+  - node103_notls_103
+  - node104_tls_104
+  - node104_notls_104
+  - node105_tls_105
+  - node105_notls_105
+  - node106_tls_106
+  - node106_notls_106
+  - node107_tls_107
+  - node107_notls_107
+  - node108_tls_108
+  - node108_notls_108
+  - node109_tls_109
+  - node109_notls_109
+  - node110_tls_110
+  - node110_notls_110
+  - node111_tls_111
+  - node111_notls_111
+  - node112_tls_112
+  - node112_notls_112
+  - node113_tls_113
+  - node113_notls_113
+  - node114_tls_114
+  - node114_notls_114
+  - node115_tls_115
+  - node115_notls_115
+  - node116_tls_116
+  - node116_notls_116
+  - node117_tls_117
+  - node117_notls_117
+  - node118_tls_118
+  - node118_notls_118
+  - node119_tls_119
+  - node119_notls_119
+  - node120_tls_120
+  - node120_notls_120
+  - node121_tls_121
+  - node121_notls_121
+  - node122_tls_122
+  - node122_notls_122
+  - node123_tls_123
+  - node123_notls_123
+  - node124_tls_124
+  - node124_notls_124
+  - node125_tls_125
+  - node125_notls_125
+  - node126_tls_126
+  - node126_notls_126
+  - node127_tls_127
+  - node127_notls_127
+  - node128_tls_128
+  - node128_notls_128
+  - node129_tls_129
+  - node129_notls_129
+  - node130_tls_130
+  - node130_notls_130
+  - node131_tls_131
+  - node131_notls_131
+  - node132_tls_132
+  - node132_notls_132
+  - node133_tls_133
+  - node133_notls_133
+  - node134_tls_134
+  - node134_notls_134
+  - node135_tls_135
+  - node135_notls_135
+  - node136_tls_136
+  - node136_notls_136
+  - node137_tls_137
+  - node137_notls_137
+  - node138_tls_138
+  - node138_notls_138
+  - node139_tls_139
+  - node139_notls_139
+  - node140_tls_140
+  - node140_notls_140
+  - node141_tls_141
+  - node141_notls_141
+  - node142_tls_142
+  - node142_notls_142
+  - node143_tls_143
+  - node143_notls_143
+  - node144_tls_144
+  - node144_notls_144
+  - node145_tls_145
+  - node145_notls_145
+  - node146_tls_146
+  - node146_notls_146
+  - node147_tls_147
+  - node147_notls_147
+  - node148_tls_148
+  - node148_notls_148
+  - node149_tls_149
+  - node149_notls_149
+  - node150_tls_150
+  - node150_notls_150
+  - node151_tls_151
+  - node151_notls_151
+  - node152_tls_152
+  - node152_notls_152
+  - node153_tls_153
+  - node153_notls_153
+  - node154_tls_154
+  - node154_notls_154
+  - node155_tls_155
+  - node155_notls_155
+  - node156_tls_156
+  - node156_notls_156
+  - node157_tls_157
+  - node157_notls_157
+  - node158_tls_158
+  - node158_notls_158
+  - node159_tls_159
+  - node159_notls_159
+  - node160_tls_160
+  - node160_notls_160
+  - node161_tls_161
+  - node161_notls_161
+  - node162_tls_162
+  - node162_notls_162
+  - node163_tls_163
+  - node163_notls_163
+  - node164_tls_164
+  - node164_notls_164
+  - node165_tls_165
+  - node165_notls_165
   - DIRECT
-- name: 自动选择
+- name: 自动选择_auto
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - node1_tls
-  - node1_notls
-  - node2_tls
-  - node2_notls
-  - node3_tls
-  - node3_notls
-  - node4_tls
-  - node4_notls
-  - node5_tls
-  - node5_notls
-  - node6_tls
-  - node6_notls
-  - node7_tls
-  - node7_notls
-  - node8_tls
-  - node8_notls
-  - node9_tls
-  - node9_notls
-  - node10_tls
-  - node10_notls
-  - node11_tls
-  - node11_notls
-  - node12_tls
-  - node12_notls
-  - node13_tls
-  - node13_notls
-  - node14_tls
-  - node14_notls
-  - node15_tls
-  - node15_notls
-  - node16_tls
-  - node16_notls
-  - node17_tls
-  - node17_notls
-  - node18_tls
-  - node18_notls
-  - node19_tls
-  - node19_notls
-  - node20_tls
-  - node20_notls
-  - node21_tls
-  - node21_notls
-  - node22_tls
-  - node22_notls
-  - node23_tls
-  - node23_notls
-  - node24_tls
-  - node24_notls
-  - node25_tls
-  - node25_notls
-  - node26_tls
-  - node26_notls
-  - node27_tls
-  - node27_notls
-  - node28_tls
-  - node28_notls
-  - node29_tls
-  - node29_notls
-  - node30_tls
-  - node30_notls
-  - node31_tls
-  - node31_notls
-  - node32_tls
-  - node32_notls
-  - node33_tls
-  - node33_notls
-  - node34_tls
-  - node34_notls
-  - node35_tls
-  - node35_notls
-  - node36_tls
-  - node36_notls
-  - node37_tls
-  - node37_notls
-  - node38_tls
-  - node38_notls
-  - node39_tls
-  - node39_notls
-  - node40_tls
-  - node40_notls
-  - node41_tls
-  - node41_notls
-  - node42_tls
-  - node42_notls
-  - node43_tls
-  - node43_notls
-  - node44_tls
-  - node44_notls
-  - node45_tls
-  - node45_notls
-  - node46_tls
-  - node46_notls
-  - node47_tls
-  - node47_notls
-  - node48_tls
-  - node48_notls
-  - node49_tls
-  - node49_notls
-  - node50_tls
-  - node50_notls
-  - node51_tls
-  - node51_notls
-  - node52_tls
-  - node52_notls
-  - node53_tls
-  - node53_notls
-  - node54_tls
-  - node54_notls
-  - node55_tls
-  - node55_notls
-  - node56_tls
-  - node56_notls
-  - node57_tls
-  - node57_notls
-  - node58_tls
-  - node58_notls
-  - node59_tls
-  - node59_notls
-  - node60_tls
-  - node60_notls
-  - node61_tls
-  - node61_notls
-  - node62_tls
-  - node62_notls
-  - node63_tls
-  - node63_notls
-  - node64_tls
-  - node64_notls
-  - node65_tls
-  - node65_notls
-  - node66_tls
-  - node66_notls
-  - node67_tls
-  - node67_notls
-  - node68_tls
-  - node68_notls
-  - node69_tls
-  - node69_notls
-  - node70_tls
-  - node70_notls
-  - node71_tls
-  - node71_notls
-  - node72_tls
-  - node72_notls
-  - node73_tls
-  - node73_notls
-  - node74_tls
-  - node74_notls
-  - node75_tls
-  - node75_notls
-  - node76_tls
-  - node76_notls
-  - node77_tls
-  - node77_notls
-  - node78_tls
-  - node78_notls
-  - node79_tls
-  - node79_notls
-  - node80_tls
-  - node80_notls
-  - node81_tls
-  - node81_notls
-  - node82_tls
-  - node82_notls
-  - node83_tls
-  - node83_notls
-  - node84_tls
-  - node84_notls
-  - node85_tls
-  - node85_notls
-  - node86_tls
-  - node86_notls
-  - node87_tls
-  - node87_notls
-  - node88_tls
-  - node88_notls
-  - node89_tls
-  - node89_notls
-  - node90_tls
-  - node90_notls
-  - node91_tls
-  - node91_notls
-  - node92_tls
-  - node92_notls
-  - node93_tls
-  - node93_notls
-  - node94_tls
-  - node94_notls
-  - node95_tls
-  - node95_notls
-  - node96_tls
-  - node96_notls
-  - node97_tls
-  - node97_notls
-  - node98_tls
-  - node98_notls
-  - node99_tls
-  - node99_notls
-  - node100_tls
-  - node100_notls
-  - node101_tls
-  - node101_notls
-  - node102_tls
-  - node102_notls
-  - node103_tls
-  - node103_notls
-  - node104_tls
-  - node104_notls
-  - node105_tls
-  - node105_notls
-  - node106_tls
-  - node106_notls
-  - node107_tls
-  - node107_notls
-  - node108_tls
-  - node108_notls
-  - node109_tls
-  - node109_notls
-  - node110_tls
-  - node110_notls
-  - node111_tls
-  - node111_notls
-  - node112_tls
-  - node112_notls
-  - node113_tls
-  - node113_notls
-  - node114_tls
-  - node114_notls
-  - node115_tls
-  - node115_notls
-  - node116_tls
-  - node116_notls
-  - node117_tls
-  - node117_notls
-  - node118_tls
-  - node118_notls
-  - node119_tls
-  - node119_notls
-  - node120_tls
-  - node120_notls
-  - node121_tls
-  - node121_notls
-  - node122_tls
-  - node122_notls
-  - node123_tls
-  - node123_notls
-  - node124_tls
-  - node124_notls
-  - node125_tls
-  - node125_notls
-  - node126_tls
-  - node126_notls
-  - node127_tls
-  - node127_notls
-  - node128_tls
-  - node128_notls
-  - node129_tls
-  - node129_notls
-  - node130_tls
-  - node130_notls
-  - node131_tls
-  - node131_notls
-  - node132_tls
-  - node132_notls
-  - node133_tls
-  - node133_notls
-  - node134_tls
-  - node134_notls
-  - node135_tls
-  - node135_notls
-  - node136_tls
-  - node136_notls
-  - node137_tls
-  - node137_notls
-  - node138_tls
-  - node138_notls
-  - node139_tls
-  - node139_notls
-  - node140_tls
-  - node140_notls
-  - node141_tls
-  - node141_notls
-  - node142_tls
-  - node142_notls
-  - node143_tls
-  - node143_notls
-  - node144_tls
-  - node144_notls
-  - node145_tls
-  - node145_notls
-  - node146_tls
-  - node146_notls
-  - node147_tls
-  - node147_notls
-  - node148_tls
-  - node148_notls
-  - node149_tls
-  - node149_notls
-  - node150_tls
-  - node150_notls
-  - node151_tls
-  - node151_notls
-  - node152_tls
-  - node152_notls
-  - node153_tls
-  - node153_notls
-  - node154_tls
-  - node154_notls
-  - node155_tls
-  - node155_notls
-  - node156_tls
-  - node156_notls
-  - node157_tls
-  - node157_notls
-  - node158_tls
-  - node158_notls
-  - node159_tls
-  - node159_notls
-  - node160_tls
-  - node160_notls
-  - node161_tls
-  - node161_notls
-  - node162_tls
-  - node162_notls
-  - node163_tls
-  - node163_notls
-  - node164_tls
-  - node164_notls
-  - node165_tls
-  - node165_notls
+  - node1_tls_1
+  - node1_notls_1
+  - node2_tls_2
+  - node2_notls_2
+  - node3_tls_3
+  - node3_notls_3
+  - node4_tls_4
+  - node4_notls_4
+  - node5_tls_5
+  - node5_notls_5
+  - node6_tls_6
+  - node6_notls_6
+  - node7_tls_7
+  - node7_notls_7
+  - node8_tls_8
+  - node8_notls_8
+  - node9_tls_9
+  - node9_notls_9
+  - node10_tls_10
+  - node10_notls_10
+  - node11_tls_11
+  - node11_notls_11
+  - node12_tls_12
+  - node12_notls_12
+  - node13_tls_13
+  - node13_notls_13
+  - node14_tls_14
+  - node14_notls_14
+  - node15_tls_15
+  - node15_notls_15
+  - node16_tls_16
+  - node16_notls_16
+  - node17_tls_17
+  - node17_notls_17
+  - node18_tls_18
+  - node18_notls_18
+  - node19_tls_19
+  - node19_notls_19
+  - node20_tls_20
+  - node20_notls_20
+  - node21_tls_21
+  - node21_notls_21
+  - node22_tls_22
+  - node22_notls_22
+  - node23_tls_23
+  - node23_notls_23
+  - node24_tls_24
+  - node24_notls_24
+  - node25_tls_25
+  - node25_notls_25
+  - node26_tls_26
+  - node26_notls_26
+  - node27_tls_27
+  - node27_notls_27
+  - node28_tls_28
+  - node28_notls_28
+  - node29_tls_29
+  - node29_notls_29
+  - node30_tls_30
+  - node30_notls_30
+  - node31_tls_31
+  - node31_notls_31
+  - node32_tls_32
+  - node32_notls_32
+  - node33_tls_33
+  - node33_notls_33
+  - node34_tls_34
+  - node34_notls_34
+  - node35_tls_35
+  - node35_notls_35
+  - node36_tls_36
+  - node36_notls_36
+  - node37_tls_37
+  - node37_notls_37
+  - node38_tls_38
+  - node38_notls_38
+  - node39_tls_39
+  - node39_notls_39
+  - node40_tls_40
+  - node40_notls_40
+  - node41_tls_41
+  - node41_notls_41
+  - node42_tls_42
+  - node42_notls_42
+  - node43_tls_43
+  - node43_notls_43
+  - node44_tls_44
+  - node44_notls_44
+  - node45_tls_45
+  - node45_notls_45
+  - node46_tls_46
+  - node46_notls_46
+  - node47_tls_47
+  - node47_notls_47
+  - node48_tls_48
+  - node48_notls_48
+  - node49_tls_49
+  - node49_notls_49
+  - node50_tls_50
+  - node50_notls_50
+  - node51_tls_51
+  - node51_notls_51
+  - node52_tls_52
+  - node52_notls_52
+  - node53_tls_53
+  - node53_notls_53
+  - node54_tls_54
+  - node54_notls_54
+  - node55_tls_55
+  - node55_notls_55
+  - node56_tls_56
+  - node56_notls_56
+  - node57_tls_57
+  - node57_notls_57
+  - node58_tls_58
+  - node58_notls_58
+  - node59_tls_59
+  - node59_notls_59
+  - node60_tls_60
+  - node60_notls_60
+  - node61_tls_61
+  - node61_notls_61
+  - node62_tls_62
+  - node62_notls_62
+  - node63_tls_63
+  - node63_notls_63
+  - node64_tls_64
+  - node64_notls_64
+  - node65_tls_65
+  - node65_notls_65
+  - node66_tls_66
+  - node66_notls_66
+  - node67_tls_67
+  - node67_notls_67
+  - node68_tls_68
+  - node68_notls_68
+  - node69_tls_69
+  - node69_notls_69
+  - node70_tls_70
+  - node70_notls_70
+  - node71_tls_71
+  - node71_notls_71
+  - node72_tls_72
+  - node72_notls_72
+  - node73_tls_73
+  - node73_notls_73
+  - node74_tls_74
+  - node74_notls_74
+  - node75_tls_75
+  - node75_notls_75
+  - node76_tls_76
+  - node76_notls_76
+  - node77_tls_77
+  - node77_notls_77
+  - node78_tls_78
+  - node78_notls_78
+  - node79_tls_79
+  - node79_notls_79
+  - node80_tls_80
+  - node80_notls_80
+  - node81_tls_81
+  - node81_notls_81
+  - node82_tls_82
+  - node82_notls_82
+  - node83_tls_83
+  - node83_notls_83
+  - node84_tls_84
+  - node84_notls_84
+  - node85_tls_85
+  - node85_notls_85
+  - node86_tls_86
+  - node86_notls_86
+  - node87_tls_87
+  - node87_notls_87
+  - node88_tls_88
+  - node88_notls_88
+  - node89_tls_89
+  - node89_notls_89
+  - node90_tls_90
+  - node90_notls_90
+  - node91_tls_91
+  - node91_notls_91
+  - node92_tls_92
+  - node92_notls_92
+  - node93_tls_93
+  - node93_notls_93
+  - node94_tls_94
+  - node94_notls_94
+  - node95_tls_95
+  - node95_notls_95
+  - node96_tls_96
+  - node96_notls_96
+  - node97_tls_97
+  - node97_notls_97
+  - node98_tls_98
+  - node98_notls_98
+  - node99_tls_99
+  - node99_notls_99
+  - node100_tls_100
+  - node100_notls_100
+  - node101_tls_101
+  - node101_notls_101
+  - node102_tls_102
+  - node102_notls_102
+  - node103_tls_103
+  - node103_notls_103
+  - node104_tls_104
+  - node104_notls_104
+  - node105_tls_105
+  - node105_notls_105
+  - node106_tls_106
+  - node106_notls_106
+  - node107_tls_107
+  - node107_notls_107
+  - node108_tls_108
+  - node108_notls_108
+  - node109_tls_109
+  - node109_notls_109
+  - node110_tls_110
+  - node110_notls_110
+  - node111_tls_111
+  - node111_notls_111
+  - node112_tls_112
+  - node112_notls_112
+  - node113_tls_113
+  - node113_notls_113
+  - node114_tls_114
+  - node114_notls_114
+  - node115_tls_115
+  - node115_notls_115
+  - node116_tls_116
+  - node116_notls_116
+  - node117_tls_117
+  - node117_notls_117
+  - node118_tls_118
+  - node118_notls_118
+  - node119_tls_119
+  - node119_notls_119
+  - node120_tls_120
+  - node120_notls_120
+  - node121_tls_121
+  - node121_notls_121
+  - node122_tls_122
+  - node122_notls_122
+  - node123_tls_123
+  - node123_notls_123
+  - node124_tls_124
+  - node124_notls_124
+  - node125_tls_125
+  - node125_notls_125
+  - node126_tls_126
+  - node126_notls_126
+  - node127_tls_127
+  - node127_notls_127
+  - node128_tls_128
+  - node128_notls_128
+  - node129_tls_129
+  - node129_notls_129
+  - node130_tls_130
+  - node130_notls_130
+  - node131_tls_131
+  - node131_notls_131
+  - node132_tls_132
+  - node132_notls_132
+  - node133_tls_133
+  - node133_notls_133
+  - node134_tls_134
+  - node134_notls_134
+  - node135_tls_135
+  - node135_notls_135
+  - node136_tls_136
+  - node136_notls_136
+  - node137_tls_137
+  - node137_notls_137
+  - node138_tls_138
+  - node138_notls_138
+  - node139_tls_139
+  - node139_notls_139
+  - node140_tls_140
+  - node140_notls_140
+  - node141_tls_141
+  - node141_notls_141
+  - node142_tls_142
+  - node142_notls_142
+  - node143_tls_143
+  - node143_notls_143
+  - node144_tls_144
+  - node144_notls_144
+  - node145_tls_145
+  - node145_notls_145
+  - node146_tls_146
+  - node146_notls_146
+  - node147_tls_147
+  - node147_notls_147
+  - node148_tls_148
+  - node148_notls_148
+  - node149_tls_149
+  - node149_notls_149
+  - node150_tls_150
+  - node150_notls_150
+  - node151_tls_151
+  - node151_notls_151
+  - node152_tls_152
+  - node152_notls_152
+  - node153_tls_153
+  - node153_notls_153
+  - node154_tls_154
+  - node154_notls_154
+  - node155_tls_155
+  - node155_notls_155
+  - node156_tls_156
+  - node156_notls_156
+  - node157_tls_157
+  - node157_notls_157
+  - node158_tls_158
+  - node158_notls_158
+  - node159_tls_159
+  - node159_notls_159
+  - node160_tls_160
+  - node160_notls_160
+  - node161_tls_161
+  - node161_notls_161
+  - node162_tls_162
+  - node162_notls_162
+  - node163_tls_163
+  - node163_notls_163
+  - node164_tls_164
+  - node164_notls_164
+  - node165_tls_165
+  - node165_notls_165
 rules:
 - ;重要！每个组名的空格后面都添加了一个隐藏字符 \u200d 用于防止与节点重名，改名需谨慎
 - exclude_remarks=(Data Left|Remain:|Traffic:|Expir[ey]|Reset|(\d[\d.]*\s*[MG]B[^\dA-Za-z]+|[:：]\s*)\d[\d.]*\s*GB(?![\dA-Za-z])|剩[余餘]流量|流量：|[到过過效]期|[时時][间間]|重置|分割线|残り使用容量|残りデータ通信量|有効期限|リセット|🔰
