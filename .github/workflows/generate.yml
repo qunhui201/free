@@ -3,13 +3,13 @@ name: Generate Nodes
 on:
   workflow_dispatch:   # 手动触发
   schedule:
-    - cron: "0 0 * * *"   # 每天 08:00 (UTC+8 对应 00:00 UTC)
+    - cron: "0 0 * * *"   # 每天 UTC 00:00，即北京时间 08:00
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -18,12 +18,12 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install pyyaml
+        run: pip install pyyaml requests
 
-      - name: Run script
+      - name: Run test.py
         run: python py/test.py
 
-      - name: Commit and push results
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -33,4 +33,3 @@ jobs:
           else
             git commit -m "Auto update nodes [skip ci]"
             git push
-          fi
