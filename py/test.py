@@ -6,7 +6,7 @@ import yaml  # 需要 PyYAML: pip install pyyaml
 
 # ========== 固定参数 ==========
 UUID = "bc9ed311-58bf-4c13-89f9-8e7e0004e58d"
-WORKER_DOMAIN = "e194.yubo220.workers.dev"   # 你的 Worker 域名
+WORKER_DOMAIN = "e194.yuba.ddns-ip.net"   # 你的 Worker 域名
 PATH = "/?ed=2560"
 NO_TLS_PORTS = {"8080", "80", "8880", "2052", "2082", "2086"}
 
