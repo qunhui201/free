@@ -23,13 +23,14 @@ jobs:
       - name: Run test.py
         run: python py/test.py
 
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add test/
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Auto update nodes [skip ci]"
-            git push
+- name: Commit and push changes
+  run: |
+    git config --global user.name "github-actions[bot]"
+    git config --global user.email "github-actions[bot]@users.noreply.github.com"
+    git add test/
+    if git diff --cached --quiet; then
+      echo "No changes to commit."
+    else
+      git commit -m "Auto update nodes [skip ci]"
+      git push
+    fi
