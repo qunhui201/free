@@ -7,7 +7,7 @@ import requests
 
 # ========== 固定参数 ==========
 UUID = "bc9ed311-58bf-4c13-89f9-8e7e0004e58d"
-WORKER_DOMAIN = "e194.yubo220.workers.dev"
+WORKER_DOMAIN = "e194.yuba.ddns-ip.net"
 PATH = "/?ed=2560"
 NO_TLS_PORTS = {"8080", "80", "8880", "2052", "2082", "2086"}
 ACL4SSR_URL = "https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Full_Mannix.ini"
@@ -20,16 +20,15 @@ OUTPUT_FILE = os.path.join(OUTPUT_DIR, "nodes.txt")
 OUTPUT_SUB_FILE = os.path.join(OUTPUT_DIR, "nodes_sub.txt")
 OUTPUT_CLASH_FILE = os.path.join(OUTPUT_DIR, "nodes_clash.yaml")
 
-# ========== 清理零宽字符函数 ==========
-def clean_name(s):
-    # 移除零宽字符和不可见字符
-    return re.sub(r"[\u200b-\u200d\uFEFF]", "", s)
-
 # ========== 节点拼接函数 ==========
-def generate_vless(name, value):
+def generate_vless(name, value, idx):
     nodes = []
     is_ip = re.match(r"^\d+\.\d+\.\d+\.\d+(?::\d+)?$", value)
     host = WORKER_DOMAIN
+
+    def make_name(base):
+        # 节点名加序号保证唯一
+        return f"{base}_{idx}"
 
     if is_ip:
         parts = value.split(":")
@@ -38,7 +37,7 @@ def generate_vless(name, value):
 
         if not port:
             nodes.append({
-                "name": clean_name(name),
+                "name": make_name(name),
                 "server": ip,
                 "port": 443,
                 "type": "vless",
@@ -50,7 +49,7 @@ def generate_vless(name, value):
             })
         elif port in NO_TLS_PORTS:
             nodes.append({
-                "name": clean_name(name),
+                "name": make_name(name),
                 "server": ip,
                 "port": int(port),
                 "type": "vless",
@@ -63,7 +62,7 @@ def generate_vless(name, value):
     else:
         # 域名 → 两种
         nodes.append({
-            "name": clean_name(f"{name}_tls"),
+            "name": make_name(f"{name}_tls"),
             "server": value,
             "port": 443,
             "type": "vless",
@@ -74,7 +73,7 @@ def generate_vless(name, value):
             "udp": True
         })
         nodes.append({
-            "name": clean_name(f"{name}_notls"),
+            "name": make_name(f"{name}_notls"),
             "server": value,
             "port": 8080,
             "type": "vless",
@@ -133,8 +132,8 @@ def main():
     all_nodes_vless = []
     all_nodes_clash = []
 
-    for k, v in kv_data.items():
-        nodes = generate_vless(k, v)
+    for idx, (k, v) in enumerate(kv_data.items(), 1):
+        nodes = generate_vless(k, v, idx)
         all_nodes_clash.extend(nodes)
 
         # 转成 vless:// 链接
@@ -169,12 +168,12 @@ def main():
         "proxies": all_nodes_clash,
         "proxy-groups": [
             {
-                "name": clean_name("节点选择"),
+                "name": "节点选择_auto",  # 保证唯一
                 "type": "select",
                 "proxies": [n["name"] for n in all_nodes_clash] + ["DIRECT"]
             },
             {
-                "name": clean_name("自动选择"),
+                "name": "自动选择_auto",  # 保证唯一
                 "type": "url-test",
                 "url": "http://www.gstatic.com/generate_204",
                 "interval": 300,
