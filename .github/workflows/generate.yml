@@ -1,0 +1,36 @@
+name: Generate Nodes
+
+on:
+  workflow_dispatch:   # 手动触发
+  schedule:
+    - cron: "0 0 * * *"   # 每天 08:00 (UTC+8 对应 00:00 UTC)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run script
+        run: python py/test.py
+
+      - name: Commit and push results
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add test/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto update nodes [skip ci]"
+            git push
+          fi
