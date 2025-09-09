@@ -2,11 +2,11 @@ import os
 import base64
 import re
 import urllib.parse
-import yaml  # 需要 PyYAML: pip install pyyaml
+import yaml
 
 # ========== 固定参数 ==========
 UUID = "bc9ed311-58bf-4c13-89f9-8e7e0004e58d"
-WORKER_DOMAIN = "e194.yuba.ddns-ip.net"   # 你的 Worker 域名
+WORKER_DOMAIN = "e194.yubo220.workers.dev"  # 你的 Worker 域名
 PATH = "/?ed=2560"
 NO_TLS_PORTS = {"8080", "80", "8880", "2052", "2082", "2086"}
 
@@ -38,7 +38,6 @@ def generate_vless(name, value):
                 "type": "vless",
                 "uuid": UUID,
                 "tls": True,
-                "servername": host,
                 "network": "ws",
                 "ws-opts": {"path": PATH, "headers": {"Host": host}},
                 "udp": True
@@ -56,7 +55,7 @@ def generate_vless(name, value):
                 "udp": True
             })
     else:
-        # 域名 → 两个
+        # 域名 → 两种
         nodes.append({
             "name": f"{name}_tls",
             "server": value,
@@ -64,7 +63,6 @@ def generate_vless(name, value):
             "type": "vless",
             "uuid": UUID,
             "tls": True,
-            "servername": host,
             "network": "ws",
             "ws-opts": {"path": PATH, "headers": {"Host": host}},
             "udp": True
@@ -95,6 +93,7 @@ def load_nodes(file_path):
             if not line or line.startswith("#"):
                 continue
 
+            # 如果是文件路径，读取子文件
             if os.path.isfile(os.path.join(BASE_DIR, line)):
                 sub_file = os.path.join(BASE_DIR, line)
                 with open(sub_file, "r", encoding="utf-8") as sf:
@@ -132,35 +131,64 @@ def main():
                 f"&fp=random&type=ws&host={host}&path={path}#{name}"
             )
 
-    # 明文输出
+    # ======= 输出明文和 base64 订阅 =======
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(all_nodes_vless))
 
-    # Base64 订阅输出
     sub_content = base64.b64encode("\n".join(all_nodes_vless).encode()).decode()
     with open(OUTPUT_SUB_FILE, "w", encoding="utf-8") as f:
         f.write(sub_content)
 
-    # Clash Meta yaml
+    # ======= 生成 Clash Meta YAML (方案1) =======
     clash_config = {
+        "port": 7890,
+        "socks-port": 7891,
+        "allow-lan": True,
+        "mode": "Rule",
+        "log-level": "info",
         "proxies": all_nodes_clash,
         "proxy-groups": [
             {
-                "name": "Auto",
+                "name": "🚀 节点选择",
+                "type": "select",
+                "proxies": [n["name"] for n in all_nodes_clash] + ["DIRECT"]
+            },
+            {
+                "name": "♻️ 自动选择",
                 "type": "url-test",
-                "proxies": [n["name"] for n in all_nodes_clash],
                 "url": "http://www.gstatic.com/generate_204",
-                "interval": 300
+                "interval": 300,
+                "proxies": [n["name"] for n in all_nodes_clash]
             }
         ],
+        # 方案1：直接引用 ACL4SSR 在线规则
+        "proxy-providers": {
+            "mysub": {
+                "type": "http",
+                "url": "https://raw.githubusercontent.com/qunhui201/free/main/test/nodes_clash.yaml",
+                "interval": 3600
+            }
+        },
+        "rule-providers": {
+            "ACL4SSR": {
+                "type": "http",
+                "behavior": "classical",
+                "url": "https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Full_Mannix.ini",
+                "path": "./ruleset/ACL4SSR.ini",
+                "interval": 86400
+            }
+        },
         "rules": [
-            "MATCH,Auto"
+            "RULE-SET,ACL4SSR,🚀 节点选择",
+            "MATCH,DIRECT"
         ]
     }
+
     with open(OUTPUT_CLASH_FILE, "w", encoding="utf-8") as f:
         yaml.dump(clash_config, f, allow_unicode=True, sort_keys=False)
 
     print(f"✅ 生成完成: \n - {OUTPUT_FILE}\n - {OUTPUT_SUB_FILE}\n - {OUTPUT_CLASH_FILE}")
+
 
 if __name__ == "__main__":
     main()
