@@ -5,12 +5,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node1_notls
   server: wz.weishao2023.dk.eu.org
@@ -22,7 +22,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node2_tls
   server: wz.weishao2023.uk.eu.org
@@ -30,12 +30,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node2_notls
   server: wz.weishao2023.uk.eu.org
@@ -47,7 +47,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node3_tls
   server: cloudflare.cfgo.cc
@@ -55,12 +55,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node3_notls
   server: cloudflare.cfgo.cc
@@ -72,7 +72,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node4_tls
   server: 086181.xyz
@@ -80,12 +80,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node4_notls
   server: 086181.xyz
@@ -97,7 +97,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node5_tls
   server: stock.hostmonit.com
@@ -105,12 +105,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node5_notls
   server: stock.hostmonit.com
@@ -122,7 +122,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node6_tls
   server: www.lyzdzy.com
@@ -130,12 +130,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node6_notls
   server: www.lyzdzy.com
@@ -147,7 +147,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node7_tls
   server: xs.wxtv.cc
@@ -155,12 +155,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node7_notls
   server: xs.wxtv.cc
@@ -172,7 +172,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node8_tls
   server: cf.zmdhc.com
@@ -180,12 +180,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node8_notls
   server: cf.zmdhc.com
@@ -197,7 +197,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node9_tls
   server: www.90dushu.com
@@ -205,12 +205,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node9_notls
   server: www.90dushu.com
@@ -222,7 +222,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node10_tls
   server: www.tushencn.com
@@ -230,12 +230,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node10_notls
   server: www.tushencn.com
@@ -247,7 +247,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node11_tls
   server: 7sc.cc
@@ -255,12 +255,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node11_notls
   server: 7sc.cc
@@ -272,7 +272,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node12_tls
   server: 0550cq.com
@@ -280,12 +280,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node12_notls
   server: 0550cq.com
@@ -297,7 +297,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node13_tls
   server: www.xinpian8.com
@@ -305,12 +305,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node13_notls
   server: www.xinpian8.com
@@ -322,7 +322,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node14_tls
   server: www.c333.net
@@ -330,12 +330,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node14_notls
   server: www.c333.net
@@ -347,7 +347,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node15_tls
   server: www.7749tv.com
@@ -355,12 +355,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node15_notls
   server: www.7749tv.com
@@ -372,7 +372,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node16_tls
   server: www.888dyy.cc
@@ -380,12 +380,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node16_notls
   server: www.888dyy.cc
@@ -397,7 +397,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node17_tls
   server: manmankan.cc
@@ -405,12 +405,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node17_notls
   server: manmankan.cc
@@ -422,7 +422,7 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node18_tls
   server: www.ddwhm.com
@@ -430,12 +430,12 @@ proxies:
   type: vless
   uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
   tls: true
-  servername: e194.yubo220.workers.dev
+  servername: e194.yuba.ddns-ip.net
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
   udp: true
 - name: node18_notls
   server: www.ddwhm.com
@@ -447,7 +447,432 @@ proxies:
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: e194.yubo220.workers.dev
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node19_tls
+  server: manmankan.cc:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node19_notls
+  server: manmankan.cc:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node20_tls
+  server: www.ddwhm.com:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node20_notls
+  server: www.ddwhm.com:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node21_tls
+  server: ipinfo.in:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node21_notls
+  server: ipinfo.in:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node22_tls
+  server: gamer.com.tw:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node22_notls
+  server: gamer.com.tw:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node23_tls
+  server: steamdb.info:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node23_notls
+  server: steamdb.info:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node24_tls
+  server: toy-people.com:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node24_notls
+  server: toy-people.com:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node25_tls
+  server: silkbook.com:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node25_notls
+  server: silkbook.com:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node26_tls
+  server: ipv4.ip.sb:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node26_notls
+  server: ipv4.ip.sb:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node27_tls
+  server: ip.gs:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node27_notls
+  server: ip.gs:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node28_tls
+  server: dnschecker.org:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node28_notls
+  server: dnschecker.org:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node29_tls
+  server: tasteatlas.com:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node29_notls
+  server: tasteatlas.com:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node30_tls
+  server: pixiv.net:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node30_notls
+  server: pixiv.net:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node31_tls
+  server: comicabc.com:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node31_notls
+  server: comicabc.com:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node32_tls
+  server: c.xf.free.hr:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node32_notls
+  server: c.xf.free.hr:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node33_tls
+  server: yecaoyun.com:2053#优选
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node33_notls
+  server: yecaoyun.com:2053#优选
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node34_tls
+  server: https://raw.githubusercontent.com/hjpwyb/WYBWYB/refs/heads/main/scripts/bbb/port.txt
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node34_notls
+  server: https://raw.githubusercontent.com/hjpwyb/WYBWYB/refs/heads/main/scripts/bbb/port.txt
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node35_tls
+  server: https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.txt
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yuba.ddns-ip.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
+  udp: true
+- name: node35_notls
+  server: https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.txt
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yuba.ddns-ip.net
   udp: true
 proxy-groups:
 - name: Auto
@@ -489,6 +914,40 @@ proxy-groups:
   - node17_notls
   - node18_tls
   - node18_notls
+  - node19_tls
+  - node19_notls
+  - node20_tls
+  - node20_notls
+  - node21_tls
+  - node21_notls
+  - node22_tls
+  - node22_notls
+  - node23_tls
+  - node23_notls
+  - node24_tls
+  - node24_notls
+  - node25_tls
+  - node25_notls
+  - node26_tls
+  - node26_notls
+  - node27_tls
+  - node27_notls
+  - node28_tls
+  - node28_notls
+  - node29_tls
+  - node29_notls
+  - node30_tls
+  - node30_notls
+  - node31_tls
+  - node31_notls
+  - node32_tls
+  - node32_notls
+  - node33_tls
+  - node33_notls
+  - node34_tls
+  - node34_notls
+  - node35_tls
+  - node35_notls
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
