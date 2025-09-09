@@ -1,8 +1,494 @@
-proxies: []
+proxies:
+- name: node1_tls
+  server: wz.weishao2023.dk.eu.org
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node1_notls
+  server: wz.weishao2023.dk.eu.org
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node2_tls
+  server: wz.weishao2023.uk.eu.org
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node2_notls
+  server: wz.weishao2023.uk.eu.org
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node3_tls
+  server: cloudflare.cfgo.cc
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node3_notls
+  server: cloudflare.cfgo.cc
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node4_tls
+  server: 086181.xyz
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node4_notls
+  server: 086181.xyz
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node5_tls
+  server: stock.hostmonit.com
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node5_notls
+  server: stock.hostmonit.com
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node6_tls
+  server: www.lyzdzy.com
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node6_notls
+  server: www.lyzdzy.com
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node7_tls
+  server: xs.wxtv.cc
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node7_notls
+  server: xs.wxtv.cc
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node8_tls
+  server: cf.zmdhc.com
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node8_notls
+  server: cf.zmdhc.com
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node9_tls
+  server: www.90dushu.com
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node9_notls
+  server: www.90dushu.com
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node10_tls
+  server: www.tushencn.com
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node10_notls
+  server: www.tushencn.com
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node11_tls
+  server: 7sc.cc
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node11_notls
+  server: 7sc.cc
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node12_tls
+  server: 0550cq.com
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node12_notls
+  server: 0550cq.com
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node13_tls
+  server: www.xinpian8.com
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node13_notls
+  server: www.xinpian8.com
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node14_tls
+  server: www.c333.net
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node14_notls
+  server: www.c333.net
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node15_tls
+  server: www.7749tv.com
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node15_notls
+  server: www.7749tv.com
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node16_tls
+  server: www.888dyy.cc
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node16_notls
+  server: www.888dyy.cc
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node17_tls
+  server: manmankan.cc
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node17_notls
+  server: manmankan.cc
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node18_tls
+  server: www.ddwhm.com
+  port: 443
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: true
+  servername: e194.yubo220.workers.dev
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
+- name: node18_notls
+  server: www.ddwhm.com
+  port: 8080
+  type: vless
+  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
+  tls: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: e194.yubo220.workers.dev
+  udp: true
 proxy-groups:
 - name: Auto
   type: url-test
-  proxies: []
+  proxies:
+  - node1_tls
+  - node1_notls
+  - node2_tls
+  - node2_notls
+  - node3_tls
+  - node3_notls
+  - node4_tls
+  - node4_notls
+  - node5_tls
+  - node5_notls
+  - node6_tls
+  - node6_notls
+  - node7_tls
+  - node7_notls
+  - node8_tls
+  - node8_notls
+  - node9_tls
+  - node9_notls
+  - node10_tls
+  - node10_notls
+  - node11_tls
+  - node11_notls
+  - node12_tls
+  - node12_notls
+  - node13_tls
+  - node13_notls
+  - node14_tls
+  - node14_notls
+  - node15_tls
+  - node15_notls
+  - node16_tls
+  - node16_notls
+  - node17_tls
+  - node17_notls
+  - node18_tls
+  - node18_notls
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
