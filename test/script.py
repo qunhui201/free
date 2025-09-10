@@ -19,6 +19,14 @@ URLS = [
     "https://raw.githubusercontent.com/freefq/free/master/v2",
     "https://raw.githubusercontent.com/liuxu0511/free18-v2ray/main/c.yaml",
     "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
+    "https://cdn.jsdelivr.net/gh/somemoo/v2rayfree@main/v2rayfree",
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+    "https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml",
+    "https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge_yaml.yml",
+    "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray",
+    "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt",
+    "https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub",
+    "https://raw.githubusercontent.com/somemoo/v2rayfree/main/v2rayfree",
     "https://www.xrayvip.com/free.txt"  
 ]
 
