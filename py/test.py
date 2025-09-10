@@ -7,7 +7,7 @@ import requests
 
 # ========== 固定参数 ==========
 UUID = "bc9ed311-58bf-4c13-89f9-8e7e0004e58d"
-WORKER_DOMAIN = "e194.yuba.ddns-ip.net"
+WORKER_DOMAIN = "f89a.liuxue02.ggff.net"
 PATH = "/?ed=2560"
 NO_TLS_PORTS = {"8080", "80", "8880", "2052", "2082", "2086"}
 ACL4SSR_URL = "https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Full_Mannix.ini"
