@@ -161,7 +161,5 @@ pixiv.net
 comicabc.com
 c.xf.free.hr
 yecaoyun.com
-https://raw.githubusercontent.com/hjpwyb/WYBWYB/refs/heads/main/scripts/bbb/port.txt
-https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.txt
 
 
