@@ -3916,54 +3916,6 @@ proxies:
     headers:
       Host: f89a.liuxue02.ggff.net
   udp: true
-- name: node164_tls_164
-  server: https://raw.githubusercontent.com/hjpwyb/WYBWYB/refs/heads/main/scripts/bbb/port.txt
-  port: 443
-  type: vless
-  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
-  tls: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: f89a.liuxue02.ggff.net
-  udp: true
-- name: node164_notls_164
-  server: https://raw.githubusercontent.com/hjpwyb/WYBWYB/refs/heads/main/scripts/bbb/port.txt
-  port: 8080
-  type: vless
-  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
-  tls: false
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: f89a.liuxue02.ggff.net
-  udp: true
-- name: node165_tls_165
-  server: https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.txt
-  port: 443
-  type: vless
-  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
-  tls: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: f89a.liuxue02.ggff.net
-  udp: true
-- name: node165_notls_165
-  server: https://raw.githubusercontent.com/amclubs/am-cf-tunnel/main/ipv4.txt
-  port: 8080
-  type: vless
-  uuid: bc9ed311-58bf-4c13-89f9-8e7e0004e58d
-  tls: false
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: f89a.liuxue02.ggff.net
-  udp: true
 proxy-groups:
 - name: 节点选择_auto
   type: select
@@ -4294,10 +4246,6 @@ proxy-groups:
   - node162_notls_162
   - node163_tls_163
   - node163_notls_163
-  - node164_tls_164
-  - node164_notls_164
-  - node165_tls_165
-  - node165_notls_165
   - DIRECT
 - name: 自动选择_auto
   type: url-test
@@ -4630,10 +4578,6 @@ proxy-groups:
   - node162_notls_162
   - node163_tls_163
   - node163_notls_163
-  - node164_tls_164
-  - node164_notls_164
-  - node165_tls_165
-  - node165_notls_165
 rules:
 - ;重要！每个组名的空格后面都添加了一个隐藏字符 \u200d 用于防止与节点重名，改名需谨慎
 - exclude_remarks=(Data Left|Remain:|Traffic:|Expir[ey]|Reset|(\d[\d.]*\s*[MG]B[^\dA-Za-z]+|[:：]\s*)\d[\d.]*\s*GB(?![\dA-Za-z])|剩[余餘]流量|流量：|[到过過效]期|[时時][间間]|重置|分割线|残り使用容量|残りデータ通信量|有効期限|リセット|🔰
