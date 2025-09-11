@@ -7,7 +7,8 @@ import requests
 
 # ========== 固定参数 ==========
 UUID = "bc9ed311-58bf-4c13-89f9-8e7e0004e58d"
-WORKER_DOMAIN = "f89a.yubo.qzz.io"
+TLS_DOMAIN = "f89a.yubo.qzz.io"
+NOTLS_DOMAIN = "f89a.liuxue02.workers.dev"
 PATH = "/?ed=2560"
 NO_TLS_PORTS = {"8080", "80", "8880", "2052", "2082", "2086"}
 ACL4SSR_URL = "https://raw.githubusercontent.com/zsokami/ACL4SSR/main/ACL4SSR_Online_Full_Mannix.ini"
@@ -24,11 +25,23 @@ OUTPUT_CLASH_FILE = os.path.join(OUTPUT_DIR, "nodes_clash.yaml")
 def generate_vless(name, value, idx):
     nodes = []
     is_ip = re.match(r"^\d+\.\d+\.\d+\.\d+(?::\d+)?$", value)
-    host = WORKER_DOMAIN
 
     def make_name(base):
-        # 节点名加序号保证唯一
         return f"{base}_{idx}"
+
+    def make_node(base_name, server, port, tls):
+        host = TLS_DOMAIN if tls else NOTLS_DOMAIN
+        return {
+            "name": make_name(base_name),
+            "server": server,
+            "port": port,
+            "type": "vless",
+            "uuid": UUID,
+            "tls": tls,
+            "network": "ws",
+            "ws-opts": {"path": PATH, "headers": {"Host": host}},
+            "udp": True
+        }
 
     if is_ip:
         parts = value.split(":")
@@ -36,53 +49,14 @@ def generate_vless(name, value, idx):
         port = parts[1] if len(parts) > 1 else None
 
         if not port:
-            nodes.append({
-                "name": make_name(name),
-                "server": ip,
-                "port": 443,
-                "type": "vless",
-                "uuid": UUID,
-                "tls": True,
-                "network": "ws",
-                "ws-opts": {"path": PATH, "headers": {"Host": host}},
-                "udp": True
-            })
+            nodes.append(make_node(name, ip, 443, True))
         elif port in NO_TLS_PORTS:
-            nodes.append({
-                "name": make_name(name),
-                "server": ip,
-                "port": int(port),
-                "type": "vless",
-                "uuid": UUID,
-                "tls": False,
-                "network": "ws",
-                "ws-opts": {"path": PATH, "headers": {"Host": host}},
-                "udp": True
-            })
+            nodes.append(make_node(name, ip, int(port), False))
     else:
-        # 域名 → 两种
-        nodes.append({
-            "name": make_name(f"{name}_tls"),
-            "server": value,
-            "port": 443,
-            "type": "vless",
-            "uuid": UUID,
-            "tls": True,
-            "network": "ws",
-            "ws-opts": {"path": PATH, "headers": {"Host": host}},
-            "udp": True
-        })
-        nodes.append({
-            "name": make_name(f"{name}_notls"),
-            "server": value,
-            "port": 8080,
-            "type": "vless",
-            "uuid": UUID,
-            "tls": False,
-            "network": "ws",
-            "ws-opts": {"path": PATH, "headers": {"Host": host}},
-            "udp": True
-        })
+        # 域名 → 生成 TLS 和 非TLS 两个节点
+        nodes.append(make_node(f"{name}_tls", value, 443, True))
+        nodes.append(make_node(f"{name}_notls", value, 8080, False))
+
     return nodes
 
 # ========== 读取 nodes.txt（支持子文件） ==========
@@ -168,12 +142,12 @@ def main():
         "proxies": all_nodes_clash,
         "proxy-groups": [
             {
-                "name": "节点选择_auto",  # 保证唯一
+                "name": "节点选择_auto",
                 "type": "select",
                 "proxies": [n["name"] for n in all_nodes_clash] + ["DIRECT"]
             },
             {
-                "name": "自动选择_auto",  # 保证唯一
+                "name": "自动选择_auto",
                 "type": "url-test",
                 "url": "http://www.gstatic.com/generate_204",
                 "interval": 300,
@@ -187,6 +161,7 @@ def main():
         yaml.dump(clash_config, f, allow_unicode=True, sort_keys=False)
 
     print(f"✅ 生成完成: \n - {OUTPUT_FILE}\n - {OUTPUT_SUB_FILE}\n - {OUTPUT_CLASH_FILE}")
+
 
 if __name__ == "__main__":
     main()
