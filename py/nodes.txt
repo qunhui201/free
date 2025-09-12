@@ -66,10 +66,7 @@ www.4chan.org
 www.okcupid.com
 www.glassdoor.com
 www.udemy.com
-alejandracaiccedo.com
-nc.gocada.co
 log.bpminecraft.com
-www.boba88slot.com
 gur.gov.ua
 www.zsu.gov.ua
 www.iakeys.com
@@ -92,8 +89,6 @@ edtunnel-dgp.pages.dev
 www.pcmag.com
 www.visa.com.tw
 www.sean-now.com
-cf-lt.sharecentre.online
-huaihuaiku.com
 visa.com
 cdn.dockerpull.xyz
 omofun.link
@@ -101,10 +96,8 @@ visakorea.com
 xxk555.com
 proxyip.hk.hw.090227.xyz
 www.multihousingnews.com
-huaihuaimu.net
 cdn.cmliu.net
 www.7749tv.com
-www.baiitv.com
 visa.com.au
 proxyip.jp.fxxk.dedyn.io
 proxyip.digitalocean.fxxk.dedyn.io
@@ -114,7 +107,6 @@ proxyip.us.cmliussss.net
 www.96dushu.com
 www.wogg.one
 blog.985864.xyz
-evan.brucewen.ip-ddns.com
 ashton.ns.cloudflare.com
 abdullah.ns.cloudflare.com
 bowen.ns.cloudflare.com
@@ -153,7 +145,6 @@ dnschecker.org
 tasteatlas.com
 pixiv.net
 comicabc.com
-c.xf.free.hr
 yecaoyun.com
 
 
