@@ -1,4 +1,5 @@
 vless://607a9fc8-3657-411f-8c81-57c7effec47b@2323.yubo.cloudns.be:443?encryption=none&security=tls&sni=2323.yubo.cloudns.be&fp=randomized&type=ws&host=2323.yubo.cloudns.be&path=%2F%3Fed%3D2048#2323.yubo.cloudns.be
+hysteria2://wyblyzj223@77.90.52.39:6254?insecure=1#Hy2-Minimal-Fix
 vless://607a9fc8-3657-411f-8c81-57c7effec47b@wz.weishao2023.dk.eu.org:443?encryption=none&security=tls&sni=2323.yubo.cloudns.be&fp=randomized&type=ws&host=2323.yubo.cloudns.be&path=%2F%3Fed%3D2048#2323
 vless://607a9fc8-3657-411f-8c81-57c7effec47b@wz.weishao2023.uk.eu.org:443?encryption=none&security=tls&sni=2323.yubo.cloudns.be&fp=randomized&type=ws&host=2323.yubo.cloudns.be&path=%2F%3Fed%3D2048#2323
 vless://607a9fc8-3657-411f-8c81-57c7effec47b@cloudflare.cfgo.cc:443?encryption=none&security=tls&sni=2323.yubo.cloudns.be&fp=randomized&type=ws&host=2323.yubo.cloudns.be&path=%2F%3Fed%3D2048#2323
