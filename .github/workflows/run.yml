@@ -1,10 +1,18 @@
+name: Access GitHub Repo with Token
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  build:
+  access-repo:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Use YUBO_TOKEN
+
+      - name: Use YUBO_TOKEN to fetch private repo content
         run: |
           curl -H "Authorization: token ${{ secrets.YUBO_TOKEN }}" \
                https://api.github.com/repos/qunhui201/free/contents/some-folder
