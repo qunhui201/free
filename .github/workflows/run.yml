@@ -26,7 +26,7 @@ jobs:
 
           # 遍历 scripts 目录下所有文件（支持多层子目录）
           find scripts -type f | while read file; do
-            key="${file#scripts/}"        # 去掉 scripts/ 前缀 → 就是 KV 的 key
+            key="${file#test/}"        # 去掉 test/ 前缀 → 就是 KV 的 key
             value=$(cat "$file" | sed 's/"/\\"/g' | tr '\n' '\f')  # 转义双引号
 
             echo "正在上传: $key"
