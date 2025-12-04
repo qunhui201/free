@@ -18,7 +18,7 @@ jobs:
       - name: 上传 test 目录所有文件到 Cloudflare KV
         env:
           CF_ACCOUNT_ID: ff1dc991c5a62e449eadbf9dc83c1f95
-          CF_NAMESPACE_ID: 0cf40b4892e945d699c659a6d9ebad2d
+          CF_NAMESPACE_ID: b53775f0202140c0881797895c42022b
           CF_API_TOKEN: ${{ secrets.CF_KV_TOKEN }}
         run: |
           echo "开始同步 test 目录到 KV..."
