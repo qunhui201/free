@@ -1,0 +1,54 @@
+name: Sync test folder to Cloudflare KV
+
+on:
+  push:
+    paths:
+      - 'test/**'              # 只有 test 目录有改动才触发
+  workflow_dispatch:         # 支持手动触发
+  schedule:
+    - cron: '0 3 * * *'      # 每天北京时间 11:00 自动同步（可改）
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 仓库
+        uses: actions/checkout@v4
+
+      - name: 上传 test 目录所有文件到 Cloudflare KV
+        env:
+          CF_ACCOUNT_ID: ff1dc991c5a62e449eadbf9dc83c1f95
+          CF_NAMESPACE_ID: 0cf40b4892e945d699c659a6d9ebad2d
+          CF_API_TOKEN: ${{ secrets.CF_KV_TOKEN }}
+        run: |
+          echo "开始同步 test 目录到 KV..."
+
+          # 检查 test 目录是否存在
+          if [ ! -d "test" ]; then
+            echo "test 目录不存在，跳过上传"
+            exit 0
+          fi
+
+          # 遍历 test 目录下所有文件（支持任意层级子文件夹）
+          find test -type f | while read file; do
+            # 把 test/ 前缀去掉 → 变成 KV 的 key
+            # 例如：test/utils/tool.js → utils/tool.js
+            key="${file#test/}"
+            
+            echo "正在上传: $key"
+
+            # 使用 Cloudflare KV 单键写入（最稳定，支持大文件）
+            response=$(curl -s -o /dev/null -w "%{http_code}" -X PUT \
+              "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/storage/kv/namespaces/$CF_NAMESPACE_ID/values/$key" \
+              -H "Authorization: Bearer $CF_API_TOKEN" \
+              -H "Content-Type: text/plain" \
+              --data-binary @"$file")
+
+            if [ "$response" = "200" ]; then
+              echo "✓ $key 上传成功"
+            else
+              echo "✗ $key 上传失败 (HTTP $response)"
+            fi
+          done
+
+          echo "全部完成！test 目录已同步到 Cloudflare KV"
