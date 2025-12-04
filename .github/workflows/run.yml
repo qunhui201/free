@@ -1,0 +1,10 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Use YUBO_TOKEN
+        run: |
+          curl -H "Authorization: token ${{ secrets.YUBO_TOKEN }}" \
+               https://api.github.com/repos/qunhui201/free/contents/some-folder
