@@ -1,15 +1,14 @@
 name: Run Node Extractor
-
 on:
   push:
     branches: [ main ]
     paths-ignore:
-      - 'py/script.py'                 # 忽略脚本本身的改动（避免频繁触发）
+      - 'py/script.py'  # 忽略脚本本身的改动（避免频繁触发）
       - '.github/workflows/run-script.yml'
-      - 'test/working_nodes.txt'       # 忽略输出文件的改动
+      - 'test/working_nodes.txt'  # 忽略输出文件的改动
   schedule:
-    - cron: '0 0 * * *'                # 每天 UTC 午夜运行（JST 09:00）
-  workflow_dispatch:                   # 手动触发
+    - cron: '0 0 * * *'  # 每天 UTC 午夜运行（JST 09:00）
+  workflow_dispatch:  # 手动触发
 
 jobs:
   extract:
@@ -34,9 +33,12 @@ jobs:
 
       - name: 安装 V2Ray
         run: |
-          wget -q https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+          # 使用 curl 替代 wget，支持 HTTPS，重试 3 次
+          curl -L -o v2ray-linux-64.zip https://github.com/v2fly/v2ray-core/releases/download/v5.41.0/v2ray-linux-64.zip || (sleep 5 && curl -L -o v2ray-linux-64.zip https://github.com/v2fly/v2ray-core/releases/download/v5.41.0/v2ray-linux-64.zip || exit 1)
           unzip v2ray-linux-64.zip -d /usr/local/bin
           chmod +x /usr/local/bin/v2ray
+          # 验证安装
+          /usr/local/bin/v2ray version
         env:
           PYTHONUNBUFFERED: 1
 
@@ -44,7 +46,7 @@ jobs:
         run: python py/script.py
         env:
           PYTHONUNBUFFERED: 1
-          USE_HTTP_TEST: false   # 默认使用端口测试，设为 true 可以启用 HTTP 测试（需要 v2ray 可用）
+          USE_HTTP_TEST: false  # 默认使用端口测试，设为 true 可以启用 HTTP 测试（需要 v2ray 可用）
 
       - name: 验证输出文件
         if: success()
@@ -100,5 +102,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: error-logs
-          path: test/working_nodes.txt
+          path: test/working_nodes.txt  # 如果失败，可能为空；考虑添加日志路径如 '*.log'
           retention-days: 3
