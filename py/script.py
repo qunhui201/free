@@ -11,18 +11,15 @@ from typing import List, Dict, Set
 
 # List of URLs that successfully returned nodes
 URLS = [
-    "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/v2",
     "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt",
     "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Sub1.txt",
     "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Sub2.txt",
-    "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Sub3.txt",
-    "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Sub4.txt",
-    "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Sub5.txt",
-    "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/Sub6.txt",
-    "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt",
     "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt",
     "https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub",
+    "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray",
+    "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
+    "https://raw.githubusercontent.com/HakurouKen/free-node/main/public",
     "https://raw.githubusercontent.com/somemoo/v2rayfree/main/v2rayfree",
     "https://www.xrayvip.com/free.txt"  
 ]
