@@ -39,7 +39,8 @@ def parse_base64_content(content: str) -> List[str]:
     try:
         decoded = base64.b64decode(content).decode('utf-8').strip()
         return decoded.splitlines()
-    except:
+    except Exception as e:
+        print(f"Error parsing base64 content: {e}")
         return []
 
 # Function to parse YAML content (for Clash configs)
@@ -49,7 +50,8 @@ def parse_yaml_content(content: str) -> List[Dict]:
         if 'proxies' in data:
             return data['proxies']
         return []
-    except:
+    except Exception as e:
+        print(f"Error parsing YAML content: {e}")
         return []
 
 # Function to parse plain text lines
@@ -87,7 +89,8 @@ def clash_to_v2ray_link(proxy: Dict) -> str:
             query = f"?sni={sni}" if sni else ""
             return f"trojan://{proxy.get('password')}@{server_port}#{proxy.get('name', proxy.get('server'))}{query}"
         return ""
-    except:
+    except Exception as e:
+        print(f"Error converting Clash proxy to V2Ray link: {e}")
         return ""
 
 # Function to extract node info based on format
@@ -175,7 +178,8 @@ def parse_proxy_link(link: str) -> Dict:
                 'full_config': link
             }
         return None
-    except:
+    except Exception as e:
+        print(f"Error parsing proxy link: {e}")
         return None
 
 # Function to deduplicate nodes based on full_config
@@ -213,21 +217,21 @@ def generate_node_file(working_nodes: List[Dict]) -> None:
         for node in working_nodes:
             f.write(f"{node['full_config']}\n")
 
-# Main function with added total count and processed count
+# Main function
 def main():
     all_nodes = []
     total_urls = len(URLS)
     processed_urls = 0
-    
+
     for url in URLS:
-        print(f"Processing URL {processed_urls + 1}/{total_urls}")
         content = download_content(url)
-        processed_urls += 1
-        
         if content:
             nodes = extract_nodes(url, content)
             all_nodes.extend(nodes)
-    
+        
+        processed_urls += 1
+        print(f"Processed {processed_urls}/{total_urls} URLs")
+
     unique_nodes = deduplicate_nodes(all_nodes)
     
     working_nodes = []
