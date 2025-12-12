@@ -195,91 +195,15 @@ def test_connectivity(node: Dict) -> bool:
     if not node.get('server') or not node.get('port'):
         return False
     
-    # Default to port test unless USE_HTTP_TEST is true
-    if os.getenv('USE_HTTP_TEST', 'false').lower() != 'true':
-        try:
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.settimeout(5)
-            result = sock.connect_ex((node['server'], int(node['port'])))
-            sock.close()
-            print(f"Port test for {node['server']}:{node['port']} - {'Success' if result == 0 else 'Failed'}")
-            return result == 0
-        except Exception as e:
-            print(f"Port test failed for {node['server']}:{node['port']}: {e}")
-            return False
-    
-    # HTTP request test using V2Ray
     try:
-        with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json') as temp_config:
-            config = {
-                "inbounds": [{
-                    "port": 10808,
-                    "protocol": "socks",
-                    "settings": {"auth": "noauth"}
-                }],
-                "outbounds": [{
-                    "protocol": node['type'],
-                    "settings": {}
-                }]
-            }
-            
-            if node['type'] == 'vmess':
-                decoded = json.loads(base64.b64decode(node['full_config'].split('://')[1] + '==').decode('utf-8'))
-                config['outbounds'][0]['settings'] = {
-                    "vnext": [{
-                        "address": node['server'],
-                        "port": int(node['port']),
-                        "users": [{"id": decoded.get('id'), "alterId": decoded.get('aid', 0)}]
-                    }]
-                }
-            elif node['type'] == 'ss':
-                parts = node['full_config'].split('://')[1].split('@')
-                auth = base64.b64decode(parts[0] + '==').decode('utf-8')
-                method, password = auth.split(':')
-                config['outbounds'][0]['settings'] = {
-                    "servers": [{
-                        "address": node['server'],
-                        "port": int(node['port']),
-                        "method": method,
-                        "password": password
-                    }]
-                }
-            elif node['type'] == 'trojan':
-                parts = node['full_config'].split('://')[1].split('@')
-                server_port = parts[1].split(':')
-                config['outbounds'][0]['settings'] = {
-                    "servers": [{
-                        "address": node['server'],
-                        "port": int(server_port[1].split('?')[0].split('#')[0]),
-                        "password": parts[0]
-                    }]
-                }
-            json.dump(config, temp_config)
-            temp_config_path = temp_config.name
-
-        # Start V2Ray with temporary config
-        v2ray_process = subprocess.Popen(['v2ray', '-config', temp_config_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        
-        # Wait briefly for V2Ray to start
-        import time
-        time.sleep(2)
-        
-        # Test HTTP request through proxy
-        proxies = {'http': 'socks5://127.0.0.1:10808', 'https': 'socks5://127.0.0.1:10808'}
-        response = requests.get('http://ip-api.com/json', proxies=proxies, timeout=10)
-        
-        # Clean up
-        v2ray_process.terminate()
-        os.unlink(temp_config_path)
-        
-        print(f"HTTP test for {node['server']}:{node['port']} - Success")
-        return response.status_code == 200
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(5)
+        result = sock.connect_ex((node['server'], int(node['port'])))
+        sock.close()
+        print(f"Port test for {node['server']}:{node['port']} - {'Success' if result == 0 else 'Failed'}")
+        return result == 0
     except Exception as e:
-        print(f"HTTP test failed for {node['server']}:{node['port']}: {e}")
-        if 'v2ray_process' in locals():
-            v2ray_process.terminate()
-        if 'temp_config_path' in locals() and os.path.exists(temp_config_path):
-            os.unlink(temp_config_path)
+        print(f"Port test failed for {node['server']}:{node['port']}: {e}")
         return False
 
 # Function to generate text file with working node links
@@ -289,11 +213,17 @@ def generate_node_file(working_nodes: List[Dict]) -> None:
         for node in working_nodes:
             f.write(f"{node['full_config']}\n")
 
-# Main function
+# Main function with added total count and processed count
 def main():
     all_nodes = []
+    total_urls = len(URLS)
+    processed_urls = 0
+    
     for url in URLS:
+        print(f"Processing URL {processed_urls + 1}/{total_urls}")
         content = download_content(url)
+        processed_urls += 1
+        
         if content:
             nodes = extract_nodes(url, content)
             all_nodes.extend(nodes)
