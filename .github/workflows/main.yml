@@ -23,17 +23,16 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
           
-          # 确保输出目录被 Git 识别
-          mkdir -p test
+          git add test/alive_servers.txt
+          git add test/beijing_hotel.m3u
           
-          # 添加所有生成的文件
-          git add test/alive_servers.txt || echo "No alive_servers found"
-          git add test/beijing_hotel.m3u || echo "No m3u found"
+          # 统计 alive_servers.txt 的行数（即服务器个数）
+          SERVER_COUNT=$(grep -c "." test/alive_servers.txt || echo 0)
+          CHANNEL_COUNT=$(grep -c "http" test/beijing_hotel.m3u || echo 0)
           
-          # 检查是否有文件更新
           if git diff --staged --quiet; then
-            echo "没有发现新数据，无需提交。"
+            echo "没有变化"
           else
-            git commit -m "更新北京源: 发现 $(grep -c 'http' test/alive_servers.txt || echo 0) 个真服务器 [$(date +'%Y-%m-%d %H:%M')]"
+            git commit -m "更新: 发现 ${SERVER_COUNT} 个服务器, ${CHANNEL_COUNT} 个频道"
             git push
           fi
