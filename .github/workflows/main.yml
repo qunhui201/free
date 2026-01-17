@@ -16,7 +16,7 @@ jobs:
 
       - name: Run Advanced Scan
         # 运行你那个分阶段的 Python 脚本
-        run: python scan.py
+        run: python py/scan.py
 
       - name: Commit and Push Results
         run: |
