@@ -14,9 +14,11 @@ jobs:
         with:
           python-version: '3.9'
 
+
       - name: Run Advanced Scan
-        # 运行你那个分阶段的 Python 脚本
-        run: python py/scan.py
+        run: |
+          pip install requests
+          python py/scan.py
 
       - name: Commit and Push Results
         run: |
