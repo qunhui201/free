@@ -2,93 +2,98 @@ import requests
 import re
 import concurrent.futures
 import os
+import base64
 
 # --- 配置区 ---
-# 1. 你在浏览器里搜索好的 FOFA URL (记得在网页上翻页，或者把每页显示数量调大)
-SEARCH_URL = "https://fofa.info/result?qbase64=InRzZmlsZS9saXZlIiAmJiByZWdpb249IkJlaWppbmci"
+# 搜索关键词：建议扩大搜索范围，去掉 js 限制，只搜路径
+KEYWORD = '"tsfile/live" && region="Hunan"'
+QUERY_B64 = base64.b64encode(KEYWORD.encode()).decode()
 
+OUTPUT_M3U = "test/hunan_hotel.m3u"
 ALIVE_SERVER_FILE = "test/alive_servers.txt"
-OUTPUT_M3U = "test/beijing_hotel.m3u"
-
-# 模拟浏览器 Header
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
 }
 
-def get_ips_from_web(url):
-    """直接从 FOFA 网页提取 IP"""
-    print(f">>> 正在读取 FOFA 网页数据...")
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=10)
-        # 匹配 IP:PORT 格式
-        pattern = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+'
-        ips = list(set(re.findall(pattern, r.text)))
-        print(f"--- 网页提取到 {len(ips)} 个潜在 IP ---")
-        return ips
-    except Exception as e:
-        print(f"提取失败: {e}")
-        return []
+def get_ips_from_fofa():
+    """提取 FOFA 网页 IP"""
+    all_ips = set()
+    for page in range(1, 4):
+        url = f"https://fofa.info/result?qbase64={QUERY_B64}&page={page}"
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            # 改进正则，防止抓到重复或错误的 IP
+            ips = re.findall(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}:\d+', r.text)
+            all_ips.update(ips)
+        except: pass
+    return list(all_ips)
 
-def get_channel_info(ip_port):
-    """自动获取该服务器的频道字典"""
+def check_single_channel(ip_port, cid, name=None):
+    """通用频道检测"""
+    url = f"http://{ip_port}/tsfile/live/{cid}_1.m3u8"
+    try:
+        r = requests.head(url, timeout=2)
+        if r.status_code == 200:
+            channel_name = name if name else f"频道-{cid}"
+            return f"#EXTINF:-1,{channel_name}\n{url}"
+    except: pass
+    return None
+
+def process_server(ip_port):
+    """处理单个服务器：先试字典，不行就爆破"""
+    print(f"正在测试服务器: {ip_port}", flush=True)
+    results = []
+    
+    # 尝试下载字典
     js_url = f"http://{ip_port}/iptv/live/zh_cn.js"
     try:
         r = requests.get(js_url, timeout=3)
         if r.status_code == 200:
-            # 提取 ID 和 频道名
             ids = re.findall(r'"channelId":"(\d+)"', r.text)
             names = re.findall(r'"channelName":"([^"]+)"', r.text)
-            return dict(zip(ids, names))
-    except:
-        pass
-    return None
+            dic = dict(zip(ids, names))
+            if dic:
+                print(f"  [√] 发现字典: {ip_port}，开始按需检测...", flush=True)
+                for cid, name in dic.items():
+                    res = check_single_channel(ip_port, cid, name)
+                    if res: results.append(res)
+                return results, True # 返回结果和“是否为真源”标志
+    except: pass
 
-def check_link(ip_port, cid, name):
-    """验证频道真实性"""
-    url = f"http://{ip_port}/tsfile/live/{cid}_1.m3u8"
-    try:
-        # 只取头信息，不下载数据，极速验证
-        r = requests.head(url, timeout=2)
-        if r.status_code == 200:
-            print(f"  [√] 成功: {name}")
-            return f"#EXTINF:-1,{name}\n{url}"
-    except:
-        pass
-    return None
+    # 如果没有字典，执行强制爆破模式 (针对 1-20 和 1000-1050)
+    print(f"  [!] 无字典，进入爆破模式: {ip_port}", flush=True)
+    scan_list = list(range(1, 21)) + list(range(1000, 1051))
+    for cid in scan_list:
+        res = check_single_channel(ip_port, cid)
+        if res: results.append(res)
+    
+    return results, len(results) > 0
 
 def main():
     os.makedirs("test", exist_ok=True)
-    
-    # 1. 抓取
-    raw_ips = get_ips_from_web(SEARCH_URL)
-    if not raw_ips: return
+    ips = get_ips_from_fofa()
+    print(f"--- 提取到 {len(ips)} 个潜在 IP ---", flush=True)
 
-    # 2. 识别字典 (阶段 1)
-    print(">>> 阶段 1: 正在识别服务器频道字典...")
-    valid_servers = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=30) as executor:
-        future_to_ip = {executor.submit(get_channel_info, ip): ip for ip in raw_ips}
+    final_m3u = ["#EXTM3U"]
+    real_ips = []
+
+    # 使用并发处理每个服务器
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_ip = {executor.submit(process_server, ip): ip for ip in ips}
         for future in concurrent.futures.as_completed(future_to_ip):
             ip = future_to_ip[future]
-            dic = future.result()
-            if dic:
-                valid_servers.append((ip, dic))
+            server_results, is_alive = future.result()
+            if is_alive:
+                final_m3u.extend(server_results)
+                real_ips.append(ip)
 
-    # 3. 深度测活 (阶段 2)
-    print(f">>> 阶段 2: 正在对 {len(valid_servers)} 个有效源进行深度验证...")
-    final_m3u = ["#EXTM3U"]
-    for ip, dic in valid_servers:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
-            futures = [executor.submit(check_link, ip, cid, name) for cid, name in dic.items()]
-            for f in concurrent.futures.as_completed(futures):
-                res = f.result()
-                if res: final_m3u.append(res)
-
-    # 4. 保存
+    # 保存
+    with open(ALIVE_SERVER_FILE, 'w') as f:
+        f.write("\n".join(real_ips))
     with open(OUTPUT_M3U, "w", encoding="utf-8") as f:
         f.write("\n".join(final_m3u))
-    
-    print(f"\n任务结束！共生成 {len(final_m3u)-1} 个有效频道。")
+
+    print(f"\n任务结束！发现 {len(real_ips)} 个真源，共汇总 {len(final_m3u)-1} 个频道。", flush=True)
 
 if __name__ == "__main__":
     main()
