@@ -3,8 +3,8 @@ import concurrent.futures
 import os
 
 # 定义配置
-INPUT_FILE = "bj_list.txt"
-OUTPUT_FILE = "beijing_hotel.m3u"
+INPUT_FILE = "py/bj_list.txt"
+OUTPUT_FILE = "test/beijing_hotel.m3u"
 # 北京联通/移动源常见的 ID 段
 SCAN_RANGES = list(range(1, 51)) + list(range(1000, 1100))
 
