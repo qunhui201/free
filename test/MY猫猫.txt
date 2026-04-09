@@ -1,5 +1,5 @@
 {
-  "spider": "http://192.168.0.109:5555/TV/jar/MY猫猫.jar",
+  "spider": "https://raw.githubusercontent.com/qunhui201/free/refs/heads/main/test/MY猫猫.jar",
   "wallpaper": "http://like.xn--z7x900a.com/ppic/feimao.php",
   "logo": "https://like.xn--z7x900a.com/panda/0262.png",
   "sites": [
@@ -375,7 +375,7 @@
       "type": 3,
       "api": "csp_Bili",
       "playerType": 1,
-      "ext": "http://192.168.0.109:5555/TV/bilibili.json"
+      "ext": "https://raw.githubusercontent.com/qunhui201/free/refs/heads/main/test/bilibili.json"
     },
     {
       "key": "儿童",
