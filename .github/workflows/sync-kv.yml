@@ -6,7 +6,7 @@ on:
       - 'test/**'              # 只有 test 目录有改动才触发
   workflow_dispatch:         # 支持手动触发
   schedule:
-    - cron: '0 3 * * *'      # 每天北京时间 11:00 自动同步（可改）
+    - cron: '0 */3 * * *'      # 每天北京时间 11:00 自动同步（可改）
 
 jobs:
   sync:
